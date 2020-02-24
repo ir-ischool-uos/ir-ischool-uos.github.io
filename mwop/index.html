@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<head>
+  <html lang="en">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous">
+  <link rel="stylesheet" href="swcStyle.css">
+  <meta charset="utf-8">
+  <title>Semantic Web Challenge ISWC2020</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#news">News</a>
+          <a class="nav-item nav-link active" href="#overview">Overview</a>
+          <a class="nav-item nav-link active" href="#imdates">Important dates</a>
+          <a class="nav-item nav-link active" href="#tasks">Tasks and datasets</a>
+          <a class="nav-item nav-link active" href="#tools">Tools</a>
+          <a class="nav-item nav-link active" href="#submit">Submission</a>
+          <a class="nav-item nav-link active" href="#results">Competition results</a>
+          <a class="nav-item nav-link active" href="#presentation">Conference presentation</a>
+          <a class="nav-item nav-link active" href="#committee">Organizing committee</a>
+        </div>
+      </div>
+    </nav>
+    <div class="row mt-4">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-4">Semantic Web Challenge on Mining HTML-embedded Product Data</h1>
+      </div>
+    </div>
+    <!-- Page Content is in the form of cards -->
+    <div class="row" id="news">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-5 " style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>News</h3>
+            <ul>
+  				<li><b><span style="color:red;">02 March 2020</span></b>: the first <a href="http://www.wikicfp.com/cfp/">Call for Participation has beeen annouced</a>. [TODO: UPDATE THE LINK] Check this webpage again by 16 March 2020 for the release of datasets!</li>
+			</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="overview">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-4" style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Overview</h3>
+            <p class="card-text">Recent years have seen significant use of semantically annotated data in the e-commerce domain, where online shops (e-shops) are increasingly adopting markup languages to describe their products in order to improve their visibility. Research from the <a href="http://webdatacommons.org/">Web Data Commons project</a> show that 37% of web pages, or 30% of websites contain structured data, of which, nearly 20% are related to products. However, fully utilising such a rapidly-growing, gigantic data source still faces significant challenges. This is because the adoption of the structured data markup practice has been generally shallow and largely inconsistent. For example, less than 10% of product instances are annotated with a category; categorisation systems used by different e-shops are highly inconsistent; same products are sold on different websites, often presenting complementary and sometimes even conflicting information. </p>
+            <p class="card-text">Addressing these issues requires an orchestra of semantic technologies tailored to the product domain, such as product classification, product instance linking, and product taxonomy matching. Such tasks are also crucial elements for the construction of product knowledge graphs, which are critical for large, cross-sectoral e-commerce vendors.</p>
+            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks related to this problem: <b>product classification</b> and <b>product instance matching</b>. We develop datasets and resources to share with the research community, in order to encourange and facilitate research in these directions. Participating teams may choose to take part in either, or both tasks, and will be invited to write a paper describing their method and system and present this at the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference. </a></p>
+            <p class="card-text">This challenge is organised by <a href="#committee">the University of Sheffield, the University of Manheim, and Amazon</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="imdates">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-4" style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Important Dates</h3>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Milestone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>16 March 2020</td>
+                  <td>Release of the training and validation sets</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>16 March 2020</td>
+                  <td>Team registration open</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>01 June 2020</td>
+                  <td>Release of the test set (without ground truth)</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>15 June 2020</td>
+                  <td>Submission of system output</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>08 July 2020</td>
+                  <td>Publication of system results</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>08 July 2020</td>
+                  <td>Notification of Acceptance for Presentation</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>TBD</td>
+                  <td>Deadline for submitting the system description paper</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>TBD</td>
+                  <td>Presentation at the <a href="https://iswc2020.semanticweb.org/">ISWC</a> conference</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="tasks">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-4" style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Tasks and datasets</h3>
+            <p class="card-text">The challenge includes two shared tasks and participating teams are free to choose to take part in either, or both tasks. We encourage participation in both tasks as the methods are potentially transferrable.</p>
+            <h4 class="card-title">Prodct matching</h4>
+            <p class="card-text">Product Matching deals with identifying product offers on different websites that refer to the same real-world product (e.g., the same iPhone X model offered using different names/offer titles as well as different descriptions on various websites).</p>
+            <p class="card-text">[TODO: Manheimn please complete this section]</p>
+            <h4 class="card-title">Product classification</h4>
+            <p class="card-text">Product classification deals with assigning predefined product category labels (which can be multiple levels) to product instances (e.g., iPhone X is a ‘SmartPhone’, and also ‘Electronics’). 
+
+This task is essentially a text classification task. Text classification is relevant to a wide range of Semantic Web research, such as named entity recognition, fact checking, and attribute validation. Therefore, we expect the research to be generalisable and beneficial for many tasks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="tools">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-4" style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Tools</h3>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="submit">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-4" style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Submission</h3>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h4 class="card-title">subsection 1</h4>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="results">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-4" style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Competition results</h3>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="presentation">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-4" style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Conference presentation</h3>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="committee">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-4 mb-3" style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Organizing committee </h3>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+<div class="container">
+<footer class="swc-footer">
+  &nbsp;
+  <h6>Acknowledgements </h6>
+  <p></p>
+  <div class="row">
+    <div class="col-sm">
+      <img src="img/sheffield3.png"  style="width:70%">
+    </div>
+    <div class="col-sm">
+      <img src="img/university-of-mannheim-logo-vector.png"  style="width:55%">
+    </div>
+    <div class="col-sm">
+      <img src="img/amazon.png" style="width:50%">
+    </div>
+  </div>
+  &nbsp;&nbsp;
+</footer>
+</div>
+</html>
