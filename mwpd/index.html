@@ -46,7 +46,7 @@
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>News</h3>
             <ul>
-  				<li><b><span style="color:red;">02 March 2020</span></b>: the first <a href="http://www.wikicfp.com/cfp/">Call for Participation has beeen annouced</a>. [TODO: UPDATE THE LINK] Check this webpage again by 16 March 2020 for the release of datasets!</li>
+  				<li><b><span style="color:red;">02 March 2020</span></b>: the first <a href="http://www.wikicfp.com/cfp/">Call for Participation has beeen annouced</a>. [ZZ: UPDATE THE LINK] Check this webpage again by 16 March 2020 for the release of datasets!</li>
 			</ul>
           </div>
         </div>
@@ -59,7 +59,7 @@
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Overview</h3>
             <p class="card-text">Recent years have seen significant use of semantically annotated data in the e-commerce domain, where online shops (e-shops) are increasingly adopting markup languages to describe their products in order to improve their visibility. Research from the <a href="http://webdatacommons.org/">Web Data Commons project</a> show that 37% of web pages, or 30% of websites contain structured data, of which, nearly 20% are related to products. However, fully utilising such a rapidly-growing, gigantic data source still faces significant challenges. This is because the adoption of the structured data markup practice has been generally shallow and largely inconsistent. For example, less than 10% of product instances are annotated with a category; categorisation systems used by different e-shops are highly inconsistent; same products are sold on different websites, often presenting complementary and sometimes even conflicting information. </p>
             <p class="card-text">Addressing these issues requires an orchestra of semantic technologies tailored to the product domain, such as product classification, product instance linking, and product taxonomy matching. Such tasks are also crucial elements for the construction of product knowledge graphs, which are critical for large, cross-sectoral e-commerce vendors.</p>
-            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks related to this problem: <b>(1) product matching (task one) </b> and <b> (2) product classification (task two)</b>. We develop datasets and resources to share with the research community, in order to encourange and facilitate research in these directions. Participating teams may choose to take part in either, or both tasks, and will be invited to write a paper describing their method and system and present this at the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference. </a></p>
+            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks related to this problem: <b>(1) product matching (task one) </b> and <b> (2) product classification (task two)</b>. We develop datasets and resources to share with the community, in order to encourage and facilitate research in these directions. Participating teams may choose to take part in either, or both tasks, and will be invited to write a paper describing their method and system and present this at the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference. </a></p>
             <p class="card-text">This challenge is organised by <a href="#committee">the University of Sheffield, the University of Manheim, and Amazon</a></p>
           </div>
         </div>
@@ -139,17 +139,19 @@
             <p class="card-text">[TODO: Manheimn please complete this section] How is the output evaluated? PRF1? Micro or Macro? Crossref to other sections that provide code for scoring, required output format etc.</p>
 
             <h4 class="card-title">Data download</h4>            
+
+            <p class="card-text">[TODO: Manheim - when available please update links accordingly. add some textual description, e.g., size]</p>
             <ul>
-  				<li><a href="#">Training set</a>: [Please add a description]</li>
-  				<li><a href="#">Validation set</a>: [Please add a description]</li>
-  				<li><a href="#">Test set</a> (To be released later)</li>
+  				<li><a href="#">Training set</a>: available by 16 March 2020</li>
+  				<li><a href="#">Validation set</a>: available by 16 March 2020</li>
+  				<li><a href="#">Test set</a>: available by 01 June 2020</li>
 			</ul>
 
 			<h4 class="card-title">Tools</h4> 
-			<p class="card-text">Please visit the <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodmatch">GitHub website</a> where we provide code for: [Please edit as you see fit. But at least, I'd suggest some code for parsing the data and scoring results]</p>
+			<p class="card-text">Our <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodmatch">GitHub website</a> is currently being updated and will be ready by 16 March 2016. It will provide code for: [TODO: Manheim please edit as you see fit. But at least, I'd suggest some code for parsing the data and scoring results]</p>
 			<ul>
   				<li>Parsing the input datasets</li>
-  				<li>Scoring the output prepared in the required format (see <a href="#Submission">the Submission section</a> for details)</li>
+  				<li>Scoring the output prepared in the required format (see <a href="#submit">the Submission section</a> for details)</li>
   				<li>Baseline</li>
 			</ul>
 			<p class="card-text">Details can be found on the corresponding GitHub page.</p>           
@@ -162,23 +164,38 @@
         <div class="card border-0 mt-4" style="width: 70rem;">
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Task Two - Product Classification</h3>
-            <p class="card-text">Product classification deals with assigning predefined product category labels (which can be multiple levels) to product instances (e.g., iPhone X is a ‘SmartPhone’, and also ‘Electronics’).</p>
+            <p class="card-text">Product classification deals with assigning predefined product category labels to product instances (e.g., iPhone X is a ‘SmartPhone’, and also ‘Electronics’). In this task, we will be using the top 3 classification levels of the <a href="https://www.gs1.org/standards/gpc">GS1 Global Product Classification scheme</a> to classify product instances. </p>
+            
             <h4 class="card-title">Data format</h4>
-            <p class="card-text">[TODO: Manheimn please complete this section] The training, validation, and test datasets will be released in JSON/CSV format. Each dataset will contain a number of instances where each instance consists of a compare of products, ..... (features etc?). The goal of this task is to determine if the instance is ... (classes?). An example of a data instance is shown as below</p>
-            <p class="card-text">[ADD AN EXAMPLE]</p>
-
-            <h4 class="card-title">Evaluation metric</h4>
-            <p class="card-text">[TODO: Manheimn please complete this section] How is the output evaluated? PRF1? Micro or Macro? Crossref to other sections that provide code for scoring, required output format etc.</p>
-
-            <h4 class="card-title">Data download</h4>            
+            <p class="card-text">Data are provided in JSON, with each line describing one product instance using the following schema. Each product will have three classification labels, corresponding to the three GS1 GPC classification levels.</p>
             <ul>
-  				<li><a href="#">Training set</a>: [Please add a description]</li>
-  				<li><a href="#">Validation set</a>: [Please add a description]</li>
-  				<li><a href="#">Test set</a> (To be released later)</li>
+  				<li>ID: an arbitrary ID of the product</li>
+  				<li>Name: the name of the product (if available)</li>
+  				<li>Description: the description of the product (if available)</li>
+  				<li>CategoryText: website-specific product category, or breadcrum (if available)</li>  				
+  				<li>URL: the original webpage URL of the product</li>
+  				<li>lvl1: the level 1 GS1 GPC classification (i.e., classification target)</li>
+  				<li>lvl2: the level 2 GS1 GPC classification (i.e., classification target)</li>
+  				<li>lvl3: the level 3 GS1 GPC classification (i.e., classification target)</li>
+			</ul>
+
+
+            <p class="card-text">An example screenshot (formatted as 'pretty-print') is shown below.</p>
+            <img src="img/prodcls_input.png" width="1000px" />
+            <p/>
+            <h4 class="card-title">Evaluation metric</h4>
+            <p class="card-text">For each classification level, the standard Precision, Recall and F1 will be used and a Weighted-Average macro-F1 will be calculated over all classes. Then the average of the WAF1 of the three levels will be calculated and used to rank the participating systems.</p>
+
+            <h4 class="card-title">Data download</h4>      
+    
+            <ul>
+  				<li><a href="#">Training set</a>: available by 16 March 2020 (contains approx. 13k instances)</li>
+  				<li><a href="#">Validation set</a>: available by 16 March 2020 (contains approx. 4k instances)</li>
+  				<li><a href="#">Test set</a>: available by 01 June 2020 (contains approx. 3k instances) </li>
 			</ul>
 
 			<h4 class="card-title">Tools</h4> 
-			<p class="card-text">Please visit the <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodcls">GitHub website</a> where we provide code for: [Please edit as you see fit. But at least, I'd suggest some code for parsing the data and scoring results]</p>
+			<p class="card-text">Our <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodcls">GitHub website</a> is currently being updated and will be ready by 16 March 2016. It will provide code for:</p>
 			<ul>
   				<li>Parsing the input datasets</li>
   				<li>Scoring the output prepared in the required format (see <a href="#Submission">the Submission section</a> for details)</li>
@@ -194,7 +211,12 @@
         <div class="card border-0 mt-4" style="width: 70rem;">
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Other Resources</h3>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p class="card-text">Participants are free to decide if they would like to use any of these resources to support their development</p>
+            <p class="card-text">To support the development of systems we have created language resources that may be useful for both tasks. We processed the <a href="http://data.dws.informatik.uni-mannheim.de/structureddata/2017-12/quads/classspecific/schema_Product.gz">2017 November WDC crawl of all entities</a> that are an instance of http://schema.org/Product, and indexed the products (English only) using <a href="https://lucene.apache.org/solr/">Solr</a> 7.3.0. We obtained [TODO] product instances with up to [TODO] properties. We then exported the descriptions of these products (if available) and used the data ([TODO] product instances after some heuristic-based filtering) to train word embeddings using the Gensim implementationf <a href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>. We share the following resources that can be used by participants:</p>
+            <ul>
+  				<li>The word embeddings trained using the <a href="#"continuous >Bag-of-Words model</a> and the <a href="#">Skip-gram</a> model (6GB each)</li>
+  				<li><a href='#'>The Solr index</a> of product data (60GB in total)</li>  				
+			</ul>
           </div>
         </div>
       </div>
@@ -216,7 +238,7 @@
             <p class="card-text">[Please add details]</p>
 
             <h5 class="card-title">Task two - product classification</h4>
-            <p class="card-text">Submit your output as a <b>single, CSV file</b> through this <a href="#">EasyChair link</a>. The file must comform to the following format:</p>
+            <p class="card-text">Submit your output as a <b>single, zip file</b> through this <a href="#">EasyChair link</a>. The zip file must contain a single CSV file comforming to the following format:</p>
 
             <ul>
   				<li>One product instance on each row</li>
@@ -226,7 +248,8 @@
 			</ul>
 
 			<p class="card-text">An example is available in the <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodcls">GitHub website</a>. A dummy example is also shown in the following screenshot.</p>
-
+			<img src="img/prodcls_output.png" width="1000px" />
+			<p/>
             <h4 class="card-title">System description paper</h4>
             <p class="card-text">Details including the formatting instructions, templates, and due date will be published in due course. </p>
           </div>
