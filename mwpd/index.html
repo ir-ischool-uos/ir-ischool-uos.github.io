@@ -24,12 +24,13 @@
           <a class="nav-item nav-link active" href="#news">News</a>
           <a class="nav-item nav-link active" href="#overview">Overview</a>
           <a class="nav-item nav-link active" href="#imdates">Important dates</a>
-          <a class="nav-item nav-link active" href="#tasks">Tasks and datasets</a>
-          <a class="nav-item nav-link active" href="#tools">Tools</a>
+          <a class="nav-item nav-link active" href="#task1">Task One</a>
+          <a class="nav-item nav-link active" href="#task2">Task Two</a>
           <a class="nav-item nav-link active" href="#submit">Submission</a>
-          <a class="nav-item nav-link active" href="#results">Competition results</a>
+          <a class="nav-item nav-link active" href="#resources">Other resources</a>
+          <a class="nav-item nav-link active" href="#results">Results</a>
           <a class="nav-item nav-link active" href="#presentation">Conference presentation</a>
-          <a class="nav-item nav-link active" href="#committee">Organizing committee</a>
+          <a class="nav-item nav-link active" href="#committee">Committee</a>
         </div>
       </div>
     </nav>
@@ -58,7 +59,7 @@
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Overview</h3>
             <p class="card-text">Recent years have seen significant use of semantically annotated data in the e-commerce domain, where online shops (e-shops) are increasingly adopting markup languages to describe their products in order to improve their visibility. Research from the <a href="http://webdatacommons.org/">Web Data Commons project</a> show that 37% of web pages, or 30% of websites contain structured data, of which, nearly 20% are related to products. However, fully utilising such a rapidly-growing, gigantic data source still faces significant challenges. This is because the adoption of the structured data markup practice has been generally shallow and largely inconsistent. For example, less than 10% of product instances are annotated with a category; categorisation systems used by different e-shops are highly inconsistent; same products are sold on different websites, often presenting complementary and sometimes even conflicting information. </p>
             <p class="card-text">Addressing these issues requires an orchestra of semantic technologies tailored to the product domain, such as product classification, product instance linking, and product taxonomy matching. Such tasks are also crucial elements for the construction of product knowledge graphs, which are critical for large, cross-sectoral e-commerce vendors.</p>
-            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks related to this problem: <b>product classification</b> and <b>product instance matching</b>. We develop datasets and resources to share with the research community, in order to encourange and facilitate research in these directions. Participating teams may choose to take part in either, or both tasks, and will be invited to write a paper describing their method and system and present this at the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference. </a></p>
+            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks related to this problem: <b>(1) product matching (task one) </b> and <b> (2) product classification (task two)</b>. We develop datasets and resources to share with the research community, in order to encourange and facilitate research in these directions. Participating teams may choose to take part in either, or both tasks, and will be invited to write a paper describing their method and system and present this at the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference. </a></p>
             <p class="card-text">This challenge is organised by <a href="#committee">the University of Sheffield, the University of Manheim, and Amazon</a></p>
           </div>
         </div>
@@ -124,41 +125,75 @@
         </div>
       </div>
     </div>
-    <div class="row" id="tasks">
+    <div class="row" id="task1">
       <div class="col-lg-8">
         <div class="card border-0 mt-4" style="width: 70rem;">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Tasks and datasets</h3>
-            <p class="card-text">The challenge includes two shared tasks and participating teams are free to choose to take part in either, or both tasks. We encourage participation in both tasks as the methods are potentially transferrable.</p>
-            <h4 class="card-title">Prodct matching</h4>
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Task One - Product Matching</h3>
             <p class="card-text">Product Matching deals with identifying product offers on different websites that refer to the same real-world product (e.g., the same iPhone X model offered using different names/offer titles as well as different descriptions on various websites).</p>
+            <h4 class="card-title">Data format</h4>
             <p class="card-text">[TODO: Manheimn please complete this section] The training, validation, and test datasets will be released in JSON/CSV format. Each dataset will contain a number of instances where each instance consists of a compare of products, ..... (features etc?). The goal of this task is to determine if the instance is ... (classes?). An example of a data instance is shown as below</p>
             <p class="card-text">[ADD AN EXAMPLE]</p>
-            <h5 class="card-title">Dataset download</h4>
-            <p class="card-text">Please also visit the <a href="#tools">GitHub website</a> of the challenge for code that help you parse the datasets and score your results</p>
+
+            <h4 class="card-title">Evaluation metric</h4>
+            <p class="card-text">[TODO: Manheimn please complete this section] How is the output evaluated? PRF1? Micro or Macro? Crossref to other sections that provide code for scoring, required output format etc.</p>
+
+            <h4 class="card-title">Data download</h4>            
             <ul>
   				<li><a href="#">Training set</a>: [Please add a description]</li>
   				<li><a href="#">Validation set</a>: [Please add a description]</li>
   				<li><a href="#">Test set</a> (To be released later)</li>
 			</ul>
 
-            <h4 class="card-title">Product classification</h4>
-            <p class="card-text">Product classification deals with assigning predefined product category labels (which can be multiple levels) to product instances (e.g., iPhone X is a ‘SmartPhone’, and also ‘Electronics’). 
-
-This task is essentially a text classification task. Text classification is relevant to a wide range of Semantic Web research, such as named entity recognition, fact checking, and attribute validation. Therefore, we expect the research to be generalisable and beneficial for many tasks.</p>
-		<h4 class="card-title">Other resources</h4>
-            <p class="card-text">Product classification deals with assigning predefined product category labels (which can be multiple levels) to product instances (e.g., iPhone X is a ‘SmartPhone’, and also ‘Electronics’). 
-
-This task is essentially a text classification task. Text classification is relevant to a wide range of Semantic Web research, such as named entity recognition, fact checking, and attribute validation. Therefore, we expect the research to be generalisable and beneficial for many tasks.</p>
+			<h4 class="card-title">Tools</h4> 
+			<p class="card-text">Please visit the <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodmatch">GitHub website</a> where we provide code for: [Please edit as you see fit. But at least, I'd suggest some code for parsing the data and scoring results]</p>
+			<ul>
+  				<li>Parsing the input datasets</li>
+  				<li>Scoring the output prepared in the required format (see <a href="#Submission">the Submission section</a> for details)</li>
+  				<li>Baseline</li>
+			</ul>
+			<p class="card-text">Details can be found on the corresponding GitHub page.</p>           
           </div>
         </div>
       </div>
     </div>
-    <div class="row" id="tools">
+    <div class="row" id="task2">
       <div class="col-lg-8">
         <div class="card border-0 mt-4" style="width: 70rem;">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Tools</h3>
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Task Two - Product Classification</h3>
+            <p class="card-text">Product classification deals with assigning predefined product category labels (which can be multiple levels) to product instances (e.g., iPhone X is a ‘SmartPhone’, and also ‘Electronics’).</p>
+            <h4 class="card-title">Data format</h4>
+            <p class="card-text">[TODO: Manheimn please complete this section] The training, validation, and test datasets will be released in JSON/CSV format. Each dataset will contain a number of instances where each instance consists of a compare of products, ..... (features etc?). The goal of this task is to determine if the instance is ... (classes?). An example of a data instance is shown as below</p>
+            <p class="card-text">[ADD AN EXAMPLE]</p>
+
+            <h4 class="card-title">Evaluation metric</h4>
+            <p class="card-text">[TODO: Manheimn please complete this section] How is the output evaluated? PRF1? Micro or Macro? Crossref to other sections that provide code for scoring, required output format etc.</p>
+
+            <h4 class="card-title">Data download</h4>            
+            <ul>
+  				<li><a href="#">Training set</a>: [Please add a description]</li>
+  				<li><a href="#">Validation set</a>: [Please add a description]</li>
+  				<li><a href="#">Test set</a> (To be released later)</li>
+			</ul>
+
+			<h4 class="card-title">Tools</h4> 
+			<p class="card-text">Please visit the <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodcls">GitHub website</a> where we provide code for: [Please edit as you see fit. But at least, I'd suggest some code for parsing the data and scoring results]</p>
+			<ul>
+  				<li>Parsing the input datasets</li>
+  				<li>Scoring the output prepared in the required format (see <a href="#Submission">the Submission section</a> for details)</li>
+  				<li>Baseline</li>
+			</ul>
+			<p class="card-text">Details can be found on the corresponding GitHub page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="resources">
+      <div class="col-lg-8">
+        <div class="card border-0 mt-4" style="width: 70rem;">
+          <div class="card-body">
+            <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Other Resources</h3>
             <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
           </div>
         </div>
@@ -169,9 +204,31 @@ This task is essentially a text classification task. Text classification is rele
         <div class="card border-0 mt-4" style="width: 70rem;">
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Submission</h3>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <h4 class="card-title">subsection 1</h4>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <p class="card-text">Please find details of the required submissions and their formats below.</p>
+
+            <h4 class="card-title">Team registration</h4>
+            <p class="card-text"><b><span style="color:red;">Open: 16 March 2020</span></b>. All teams wishing to take part in either task must register their interest via this <a href="#">EasyChair link</a> [TODO].</p>
+
+            <h4 class="card-title">System outputs</h4>
+            <p class="card-text"><b><span style="color:red;">Due: 15 June 2020</span></b></p>
+
+            <h5 class="card-title">Task one - product matching</h4>
+            <p class="card-text">[Please add details]</p>
+
+            <h5 class="card-title">Task two - product classification</h4>
+            <p class="card-text">Submit your output as a <b>single, CSV file</b> through this <a href="#">EasyChair link</a>. The file must comform to the following format:</p>
+
+            <ul>
+  				<li>One product instance on each row</li>
+  				<li>Comma separated</li>
+  				<li>Column 1=product ID as-is in the test set, column 2=Level 1 label, column 3=Level 2 label, and column 4=Level 3 label</li>
+  				<li>Use UTF-8 encoding</li>  				
+			</ul>
+
+			<p class="card-text">An example is available in the <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodcls">GitHub website</a>. A dummy example is also shown in the following screenshot.</p>
+
+            <h4 class="card-title">System description paper</h4>
+            <p class="card-text">Details including the formatting instructions, templates, and due date will be published in due course. </p>
           </div>
         </div>
       </div>
@@ -181,7 +238,7 @@ This task is essentially a text classification task. Text classification is rele
         <div class="card border-0 mt-4" style="width: 70rem;">
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Competition results</h3>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p class="card-text">Results of the participating systems will be published here in due course.</p>
           </div>
         </div>
       </div>
@@ -191,7 +248,7 @@ This task is essentially a text classification task. Text classification is rele
         <div class="card border-0 mt-4" style="width: 70rem;">
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Conference presentation</h3>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p class="card-text">Participants will be invited to write a paper that report their methods and systems. Details of the presentation schedule will be published here in due course.</p>
           </div>
         </div>
       </div>
@@ -201,7 +258,17 @@ This task is essentially a text classification task. Text classification is rele
         <div class="card border-0 mt-4 mb-3" style="width: 70rem;">
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Organizing committee </h3>
-            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p class="card-text">To contact the organising committee please use the generic email: <a href="mailto:someone@example.com" target="_top">TOADD</a></p>
+            <ul>
+  				<li>Dr Ziqi Zhang (Information School, The University of Sheffield)</li>
+  				<li>Prof. Christian Bizer (Institute of Computer Science and Business Informatics, The Manheim University)</li>
+  				<li>Dr Haiping Lu (Department of Computer Science, The University of Sheffield)</li>
+  				<li>Dr Jun Ma (Amazon Inc. Seattle, US)</li>
+  				<li>Prof. Paul Clough (Information School, The University of Sheffield)</li>
+  				<li>Ms Anna Primpeli (Institute of Computer Science and Business Informatics, The Manheim University)</li>
+  				<li>Mr Ralph Peeters (Institute of Computer Science and Business Informatics, The Manheim University)</li>
+  				<li>Mr. Abdulkareem Alqusair (Information School, The University of Sheffield)</li>
+			</ul>
           </div>
         </div>
       </div>
