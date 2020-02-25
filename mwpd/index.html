@@ -46,7 +46,7 @@
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>News</h3>
             <ul>
-  				<li><b><span style="color:red;">02 March 2020</span></b>: the first <a href="http://www.wikicfp.com/cfp/">Call for Participation has beeen annouced</a>. [ZZ: UPDATE THE LINK] Check this webpage again by 16 March 2020 for the release of datasets!</li>
+  				<li><b><span style="color:red;">02 March 2020</span></b>: the first <a href="http://www.wikicfp.com/cfp/">Call for Participation has beeen annouced</a>. [ZZ: UPDATE THE LINK] The <a href="https://groups.google.com/forum/#!forum/mwpd2020">Google discussion group</a> is also open. Please join the discussion if you wish to take part in this event! Check this webpage again by 16 March 2020 for the release of datasets!</li>
 			</ul>
           </div>
         </div>
@@ -79,16 +79,16 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+              	<tr>
                   <th scope="row">1</th>
-                  <td>16 March 2020</td>
-                  <td>Release of the training and validation sets</td>
+                  <td>02 March 2020</td>
+                  <td>Google support group open. Please join the group <a href="https://groups.google.com/forum/#!forum/mwpd2020">here</a> if you wish to take part in this event </td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
                   <td>16 March 2020</td>
-                  <td>Team registration open. You <b><span style="color:red;">MUST</span></b> register in order to participate. See the 'Submission' link for details. </td>
-                </tr>
+                  <td>Release of the training and validation sets</td>
+                </tr>                
                 <tr>
                   <th scope="row">3</th>
                   <td>? 2020</td>
@@ -219,8 +219,8 @@
             <p class="card-text">Participants are free to decide if they would like to use any of these resources to support their development</p>
             <p class="card-text">To support the development of systems we have created language resources that may be useful for both tasks. We processed the <a href="http://data.dws.informatik.uni-mannheim.de/structureddata/2017-12/quads/classspecific/schema_Product.gz">2017 November WDC crawl of all entities</a> that are an instance of http://schema.org/Product, and indexed the products (English only) using <a href="https://lucene.apache.org/solr/">Solr</a> 7.3.0. We obtained [TODO] product instances with up to [TODO] properties. We then exported the descriptions of these products (if available) and used the data ([TODO] product instances after some heuristic-based filtering) to train word embeddings using the Gensim implementationf <a href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>. We share the following resources that can be used by participants:</p>
             <ul>
-  				<li>The word embeddings trained using the <a href="#"continuous >Bag-of-Words model</a> and the <a href="#">Skip-gram</a> model (6GB each)</li>
-  				<li><a href='#'>The Solr index</a> of product data (60GB in total)</li>  				
+  				<li>The word embeddings trained using the <a href="https://drive.google.com/drive/folders/1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl?usp=sharing"continuous >Bag-of-Words model</a> and the <a href="https://drive.google.com/drive/folders/1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl?usp=sharing">Skip-gram</a> model (6GB each)</li>
+  				<li><a href='https://drive.google.com/drive/folders/1Sm71muttxAB3Sk4-3tYJ1-jXuhaaNa8N?usp=sharing'>The Solr index</a> of product data (60GB in total)</li>  				
 			</ul>
           </div>
         </div>
@@ -231,19 +231,16 @@
         <div class="card border-0 mt-4" style="width: 70rem;">
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Submission</h3>
-            <p class="card-text">Please find details of the required submissions and their formats below.</p>
-
-            <h4 class="card-title">Team registration</h4>
-            <p class="card-text"><b><span style="color:red;">Open: 16 March 2020</span></b>. All teams wishing to take part in either task must register their interest via this <a href="#">Google Form link</a> [TODO].</p>
+            <p class="card-text">Please find details of the required submissions and their formats below.</p>           
 
             <h4 class="card-title">System outputs</h4>
-            <p class="card-text"><b><span style="color:red;">Due: 15 June 2020</span></b></p>
+            <p class="card-text"><b><span style="color:red;">Due: 15 June 2020</span></b>. For both tasks, please name your submission in the following pattern: [Team]_[Task1/2] where 'Team' should be a short name to identify your team. This will be used to list participant results. 'Task1/2' should be either 'Task1' or 'Task2' depending on which task you participate in. If you take part in both tasks, please make two separate submissions.</p>
 
             <h5 class="card-title">Task one - product matching</h4>
             <p class="card-text">[Please add details]</p>
 
             <h5 class="card-title">Task two - product classification</h4>
-            <p class="card-text">Submit your output as a <b>single, zip file</b> through this <a href="#">Google Form link</a>. The zip file must contain a single CSV file comforming to the following format:</p>
+            <p class="card-text">Submit your output as a <b>single, zip file</b> through this <a href="https://script.google.com/a/sheffield.ac.uk/macros/s/AKfycbyOtAMYWvZISZVUPPmCBd9DUngwJIlRZgZqAPM4TQUKXxRTbhA/exec">Google Form link</a>. The zip file must contain a single CSV file comforming to the following format:</p>
 
             <ul>
   				<li>One product instance on each row</li>
@@ -286,7 +283,7 @@
         <div class="card border-0 mt-4 mb-3" style="width: 70rem;">
           <div class="card-body">
             <h3 class="card-title"><i class="fas fa-chevron-right fa-xs" style="margin-right:8px"></i>Organizing committee </h3>
-            <p class="card-text">To contact the organising committee please use the generic email: <a href="mailto:someone@example.com" target="_top">TOADD</a></p>
+            <p class="card-text">To contact the organising committee please use the Google discussion group <a href="https://groups.google.com/forum/#!forum/mwpd2020">here</a></p>
             <ul>
   				<li>Dr Ziqi Zhang (Information School, The University of Sheffield)</li>
   				<li>Prof. Christian Bizer (Institute of Computer Science and Business Informatics, The Manheim University)</li>
