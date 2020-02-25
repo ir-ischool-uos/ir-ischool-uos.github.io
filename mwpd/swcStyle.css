@@ -34,6 +34,6 @@ margin-bottom: 0;
   padding: 10px;
 
 }
-#timeline tr {
-   height: 2px; 
+tr {
+   line-height: 10px;
 }
