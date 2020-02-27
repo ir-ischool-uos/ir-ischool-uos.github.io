@@ -33,7 +33,9 @@
 
     <div class="row mt-4">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-4"><b style="font-weight: 600;font-size: 40px;color: #4d4d4d!important;">Semantic Web Challenge on Mining HTML-embedded Product Data</b></h1>
+        <h1 class="mt-4"><b style="font-weight: 600;font-size: 30px;color: #4d4d4d!important;">Semantic Web Challenge on Mining HTML-embedded Product Data</b></h1>
+        <h2 class="mt-4"><b style="font-weight: 600;font-size: 20px;color: #4d4d4d!important;">@</b>
+        	<a href="https://iswc2020.semanticweb.org/"><img src="img/ISWC2020_logo_is.png" width="10%" /></a></h1>
       </div>
     </div>
     <!-- Page Content is in the form of cards -->
@@ -43,6 +45,7 @@
           <div class="card-body">
             <h3 class="card-title"><b style="color:#333333">News</b></h3>
             <ul>
+            	<li><img src="img/pin.jpeg" width="30px" /><span style="color: red">Winners of each task will be awarded 500 euro!</span> (Partly sponsored by <a href="https://www.peakindicators.com/">Peak Indicators</a>)</li>
   				<li><b>02 March 2020</b>: the first <a href="http://www.wikicfp.com/cfp/">Call for Participation has beeen annouced</a>. [ZZ: UPDATE THE LINK] The <a href="https://groups.google.com/forum/#!forum/mwpd2020">Google discussion group</a> is also open. Please join the discussion if you wish to take part in this event! Check this webpage again by 16 March 2020 for the release of datasets!</li>
 			</ul>
           </div>
@@ -54,10 +57,10 @@
         <div class="card border-0 mt-2">
           <div class="card-body">
             <h3 class="card-title"><b style="color:#333333">Overview</b></h3>
-            <p class="card-text">Recent years have seen significant use of semantic annotations in the e-commerce domain, where online shops (e-shops) are increasingly adopting semantic markup languages to describe their products in order to improve their visibility. Statistics from the <a href="http://webdatacommons.org/">Web Data Commons project</a> show that 37% of the websites covered by a large web crawl provide semantic annotations. 849,000 of these websites annotate product data using the schema.org classes product and offer. However, fully utilising such a gigantic data source still faces significant challenges. This is because the adoption of semantic markup practice has been generally shallow and to a certain extent inconsistent. For example, less than 10% of product instances are annotated with a category; categorisation systems used by different e-shops are highly inconsistent; the same products are offered on different websites, often presenting complementary and sometimes even conflicting information.</p>
+            <p class="card-text">Recent years have seen significant use of semantic annotations in the e-commerce domain, where online shops (e-shops) are increasingly adopting semantic markup languages to describe their products in order to improve their visibility. Statistics from the <a href="http://webdatacommons.org/structureddata/2019-12/stats/stats.html">Web Data Commons project</a> show that 37% of the websites covered by a large web crawl provide semantic annotations. 849,000 of these websites annotate product data using the schema.org classes product and offer. However, fully utilising such a gigantic data source still faces significant challenges. This is because the adoption of semantic markup practice has been generally shallow and to a certain extent inconsistent. For example, less than 10% of product instances are annotated with a category; categorisation systems used by different e-shops are highly inconsistent; the same products are offered on different websites, often presenting complementary and sometimes even conflicting information.</p>
             <p class="card-text">Addressing these challenges requires an orchestra of semantic technologies tailored to the product domain, such as product classification, product offer matching, and product taxonomy matching. Such tasks are also crucial elements for the construction of product knowledge graphs, which are used by large, cross-sectoral e-commerce vendors.</p>
-            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks in e-commerce data integration: <b> (1) product matching (task one) </b> and <b> (2) product classification (task two) </b>. We develop datasets and resources to share with the community, in order to encourage and facilitate research in these directions. Participating teams may choose to take part in either, or both tasks. Teams successfully beating the baseline of the respective task, will be invited to write a paper describing their method and system and present the method as a poster (and potentially also a short talk) at the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference. </a></p>
-            <p class="card-text">This challenge is organised by <a href="#committee">the University of Sheffield, the University of Mannheim, and Amazon</a></p>
+            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks in e-commerce data integration: <b> (1) product matching (task one) </b> and <b> (2) product classification (task two) </b>. We develop datasets and resources to share with the community, in order to encourage and facilitate research in these directions. Participating teams may choose to take part in either, or both tasks. Teams successfully beating the baseline of the respective task, will be invited to write a paper describing their method and system and present the method as a poster (and potentially also a short talk) at the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference. </a> Winners of each task will also be awarded 500 euro. This is partly sponsored by <a href="https://www.peakindicators.com/">Peak Indicators</a></p>
+            <p class="card-text">This challenge is organised by the University of Sheffield, the University of Mannheim, and Amazon.</p>
           </div>
         </div>
       </div>
@@ -82,10 +85,6 @@
                 <tr>
                   <td>16 March 2020</td>
                   <td>Release of the training and validation sets</td>
-                </tr>
-                <tr>
-                  <td>? 2020</td>
-                  <td>Team registration closed. </td>
                 </tr>
                 <tr>
                   <td>01 June 2020</td>
@@ -171,14 +170,18 @@
           <div class="card-body">
             <h3 class="card-title"><b style="color:#333333">Task Two - Product Classification</b></h3>
             <p class="card-text">Product classification deals with assigning predefined product category labels to product instances (e.g., iPhone X is a ‘SmartPhone’, and also ‘Electronics’). In this task, we will be using the top 3 classification levels of the <a href="https://www.gs1.org/standards/gpc">GS1 Global Product Classification scheme</a> to classify product instances. </p>
-
+            <h4 class="card-title"><b style="color:#333333">Background information</b></h4>
+            <p class="card-text">Same products are often sold on different websites, which generally organise their products into certain categorisation systems. However, such product categorisations differ significantly for different websites, even if they sell similar product ranges. This makes it difficult for product information integration services to collect and organise product offers on the Web.</p>
+            <p>An increasing number of studies have been carried out for automated product classification based on the product offer information made available on the Web. Initiatives such as the <a href="https://sigir-ecom.github.io/data-task.html">Rakuten Data Challenge</a> were also created to develop benchmarks for such tasks. However, the majority of such datasets have been created based on a single source of website, and using a flat classification structure.</p>
+            <p class="card-text">The Web Data Commons project released in 2014 the <a href="http://webdatacommons.org/structureddata/2014-12/products/gs.html">first product classification dataset</a> collected from multiple websites, annotated with three levels of classification labels. This dataset has been extended and is now used for the product classification task in this challenge.</p>
+            
             <h4 class="card-title"><b style="color:#333333">Data format</b></h4>
             <p class="card-text">Data are provided in JSON, with each line describing one product instance using the following schema. Each product will have three classification labels, corresponding to the three GS1 GPC classification levels.</p>
             <ul>
   				<li>ID: an arbitrary ID of the product</li>
-  				<li>Name: the name of the product (if available)</li>
-  				<li>Description: the description of the product (if available)</li>
-  				<li>CategoryText: website-specific product category, or breadcrum (if available)</li>
+  				<li>Name: the name of the product (an empty string if unavailable)</li>
+  				<li>Description: the description of the product (an empty string if unavailable)</li>
+  				<li>CategoryText: website-specific product category, or breadcrum (an empty string if unavailable)</li>
   				<li>URL: the original webpage URL of the product</li>
   				<li>lvl1: the level 1 GS1 GPC classification (i.e., classification target)</li>
   				<li>lvl2: the level 2 GS1 GPC classification (i.e., classification target)</li>
@@ -195,8 +198,8 @@
             <h4 class="card-title"><b style="color:#333333">Data download</b></h4>
 
             <ul>
-  				<li><a href="#">Training set</a>: available by 16 March 2020 (contains approx. 13k instances)</li>
-  				<li><a href="#">Validation set</a>: available by 16 March 2020 (contains approx. 4k instances)</li>
+  				<li><a href="#">Training set</a>: available by 16 March 2020 (contains approx. 10k instances)</li>
+  				<li><a href="#">Validation set</a>: available by 16 March 2020 (contains approx. 3k instances)</li>
   				<li><a href="#">Test set</a>: available by 01 June 2020 (contains approx. 3k instances) </li>
 			</ul>
 
@@ -205,7 +208,7 @@
 			<ul>
   				<li>Parsing the input datasets</li>
   				<li>Scoring the output prepared in the required format (see <a href="#Submission">the Submission section</a> for details)</li>
-  				<li>Baseline</li>
+  				<li>Baseline, which is a FastText implementation same as that in the Rakuten Data Challenge</li>
 			</ul>
 			<p class="card-text">Details can be found on the corresponding GitHub page.</p>
           </div>
@@ -218,10 +221,10 @@
           <div class="card-body">
             <h3 class="card-title"><b style="color:#333333">Other Resources</b></h3>
             <p class="card-text">Participants are free to decide if they would like to use any of these resources to support their development</p>
-            <p class="card-text">To support the development of systems we have created language resources that may be useful for both tasks. We processed the <a href="http://data.dws.informatik.uni-mannheim.de/structureddata/2017-12/quads/classspecific/schema_Product.gz">2017 November WDC crawl of all entities</a> that are an instance of http://schema.org/Product, and indexed the products (English only) using <a href="https://lucene.apache.org/solr/">Solr</a> 7.3.0. We obtained [TODO] product instances with up to [TODO] properties. We then exported the descriptions of these products (if available) and used the data ([TODO] product instances after some heuristic-based filtering) to train word embeddings using the Gensim implementationf <a href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>. We share the following resources that can be used by participants:</p>
+            <p class="card-text">To support the development of systems we have created language resources that may be useful for both tasks. We processed the <a href="http://data.dws.informatik.uni-mannheim.de/structureddata/2017-12/quads/classspecific/schema_Product.gz">2017 November WDC crawl of all entities</a> that are an instance of http://schema.org/Product or http://schema.org/Offer, and indexed the products (English only) using <a href="https://lucene.apache.org/solr/">Solr</a> 7.3.0. We then exported the descriptions of these products (if available) and used the data (some heuristic-based filtering is applied) to train word embeddings using the Gensim implementation of <a href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>. We share the following resources that can be used by participants:</p>
             <ul>
-  				<li>The word embeddings trained using the <a href="https://drive.google.com/drive/folders/1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl?usp=sharing"continuous >Bag-of-Words model</a> and the <a href="https://drive.google.com/drive/folders/1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl?usp=sharing">Skip-gram</a> model (6GB each)</li>
-  				<li><a href='https://drive.google.com/drive/folders/1Sm71muttxAB3Sk4-3tYJ1-jXuhaaNa8N?usp=sharing'>The Solr index</a> of product data (60GB in total)</li>
+  				<li>The word embeddings trained using the <a href="https://drive.google.com/open?id=1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl">continuous Bag-of-Words model</a> and the <a href="https://drive.google.com/open?id=1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl">Skip-gram</a> model (6GB each)</li>
+  				<li><a href='https://drive.google.com/open?id=1lbhhhV29QqBm6b-awTJVKEjlytVcg7XQ'>The text corpus</a> used to train the embeddings (11GB)</li>
 			</ul>
           </div>
         </div>
@@ -312,14 +315,17 @@
   <h6 style="color: white;">Acknowledgements </h6>
   <p></p>
   <div class="row" style="margin:0;">
-    <div class="col-sm-4">
-      <img src="img/sheffield3.png"  style="width:70%">
+  	<div class="col-sm-4">
+      <a href="https://www.peakindicators.com/"><img src="img/peak2.jpg"  style="width:60%"></a>
     </div>
     <div class="col-sm-4">
-      <img src="img/university-of-mannheim-logo-vector.png"  style="width:55%">
+      <a href="https://www.sheffield.ac.uk/"><img src="img/sheffield3.png"  style="width:70%"></a>
     </div>
     <div class="col-sm-4">
-      <img src="img/amazon.png" style="width:50%">
+      <a href="https://www.uni-mannheim.de/"><img src="img/university-of-mannheim-logo-vector.png"  style="width:55%"></a>
+    </div>
+    <div class="col-sm-4">
+      <a href="https://www.amazon.com/"><img src="img/amazon.png" style="width:50%"></a>
     </div>
     &nbsp;&nbsp;
   </div>
