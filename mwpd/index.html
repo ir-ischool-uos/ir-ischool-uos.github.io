@@ -54,10 +54,10 @@
         <div class="card border-0 mt-2">
           <div class="card-body">
             <h3 class="card-title"><b style="color:#333333">Overview</b></h3>
-            <p class="card-text">Recent years have seen significant use of semantically annotated data in the e-commerce domain, where online shops (e-shops) are increasingly adopting markup languages to describe their products in order to improve their visibility. Research from the <a href="http://webdatacommons.org/">Web Data Commons project</a> show that 37% of web pages, or 30% of websites contain structured data, of which, nearly 20% are related to products. However, fully utilising such a rapidly-growing, gigantic data source still faces significant challenges. This is because the adoption of the structured data markup practice has been generally shallow and largely inconsistent. For example, less than 10% of product instances are annotated with a category; categorisation systems used by different e-shops are highly inconsistent; same products are sold on different websites, often presenting complementary and sometimes even conflicting information. </p>
-            <p class="card-text">Addressing these issues requires an orchestra of semantic technologies tailored to the product domain, such as product classification, product instance linking, and product taxonomy matching. Such tasks are also crucial elements for the construction of product knowledge graphs, which are critical for large, cross-sectoral e-commerce vendors.</p>
-            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks related to this problem: <b>(1) product matching (task one) </b> and <b> (2) product classification (task two)</b>. We develop datasets and resources to share with the community, in order to encourage and facilitate research in these directions. Participating teams may choose to take part in either, or both tasks, and will be invited to write a paper describing their method and system and present this at the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference. </a></p>
-            <p class="card-text">This challenge is organised by <a href="#committee">the University of Sheffield, the University of Manheim, and Amazon</a></p>
+            <p class="card-text">Recent years have seen significant use of semantic annotations in the e-commerce domain, where online shops (e-shops) are increasingly adopting semantic markup languages to describe their products in order to improve their visibility. Statistics from the <a href="http://webdatacommons.org/">Web Data Commons project</a> show that 37% of the websites covered by a large web crawl provide semantic annotations. 849,000 of these websites annotate product data using the schema.org classes product and offer. However, fully utilising such a gigantic data source still faces significant challenges. This is because the adoption of semantic markup practice has been generally shallow and to a certain extent inconsistent. For example, less than 10% of product instances are annotated with a category; categorisation systems used by different e-shops are highly inconsistent; the same products are offered on different websites, often presenting complementary and sometimes even conflicting information.</p>
+            <p class="card-text">Addressing these challenges requires an orchestra of semantic technologies tailored to the product domain, such as product classification, product offer matching, and product taxonomy matching. Such tasks are also crucial elements for the construction of product knowledge graphs, which are used by large, cross-sectoral e-commerce vendors.</p>
+            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks in e-commerce data integration: <b> (1) product matching (task one) </b> and <b> (2) product classification (task two) </b>. We develop datasets and resources to share with the community, in order to encourage and facilitate research in these directions. Participating teams may choose to take part in either, or both tasks. Teams successfully beating the baseline of the respective task, will be invited to write a paper describing their method and system and present the method as a poster (and potentially also a short talk) at the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference. </a></p>
+            <p class="card-text">This challenge is organised by <a href="#committee">the University of Sheffield, the University of Mannheim, and Amazon</a></p>
           </div>
         </div>
       </div>
@@ -122,31 +122,45 @@
         <div class="card border-0 mt-2">
           <div class="card-body">
             <h3 class="card-title"><b style="color:#333333">Task One - Product Matching</b></h3>
-            <p class="card-text">Product Matching deals with identifying product offers on different websites that refer to the same real-world product (e.g., the same iPhone X model offered using different names/offer titles as well as different descriptions on various websites).</p>
+            <p class="card-text">Product matching deals with identifying product offers deriving from different websites that refer to the same real-world product. In this task, product matching is handled as a binary classification problem: given two product offers decide if they describe the same product (matching) or not (non-matching).</p>
+            <h4 class="card-title"><b style="color:#333333">Background information</b></h4>
+            <p class="card-text">Product offers are published on the web together with some textual descriptions and are often accompanied by specification tables, i.e. HTML tables that contain specifications about the offer such as price or the country of origin. The syntactic, structural and semantic heterogeneity among the offers makes product matching a challenging task. </p>
+            <p class="card-text">The Web Data Commons project has released in 2018 the <a href="http://webdatacommons.org/largescaleproductcorpus/v2/index.html">WDC Product Data Corpus</a>, the largest publicly available product data corpus originating from e-shops on the Web. The corpus consists of 26 million product offers originating from 70 thousand different e-shops. Exploiting the weak supervision found on the web in the form of product identifiers, such as GTINs or MPNs, product offers are grouped into 16 million clusters. The clusters can be used to derive training sets containing matching and non-matching pairs of offers. The derived sets can in turn be used to train the actual matching methods.</p>
             <h4 class="card-title"><b style="color:#333333">Data format</b></h4>
-            <p class="card-text">[TODO: Manheimn please complete this section] The training, validation, and test datasets will be released in JSON/CSV format. Each dataset will contain a number of instances where each instance consists of a compare of products, ..... (features etc?). The goal of this task is to determine if the instance is ... (classes?). An example of a data instance is shown as below</p>
-            <p class="card-text">[ADD AN EXAMPLE]</p>
-
-            <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
-            <p class="card-text">[TODO: Manheimn please complete this section] How is the output evaluated? PRF1? Micro or Macro? Crossref to other sections that provide code for scoring, required output format etc.</p>
-
-            <h4 class="card-title"><b style="color:#333333">Data download</b></h4>
-
-            <p class="card-text">[TODO: Manheim - when available please update links accordingly. add some textual description, e.g., size]</p>
+            <p class="card-text">We offer the product data corpus in JSON format. Offers having the same cluster ID attribute are considered to describe the same real-world product while different cluster IDs signify different products. The grouping of offers into clusters is subject to some degree of noise (approx. 7%) as it has been constructed using a <a href="https://dl.acm.org/doi/10.1145/3308560.3316609">heuristic</a> to cleanse the product identifiers, such as GTINs and MPNs, found on the Web. Every JSON object describing an offer has the following JSON properties:</p>
             <ul>
-  				<li><a href="#">Training set</a>: available by 16 March 2020</li>
-  				<li><a href="#">Validation set</a>: available by 16 March 2020</li>
-  				<li><a href="#">Test set</a>: available by 01 June 2020</li>
+              <li>id: Unique identifier of an offer (random integer)</li>
+              <li>cluster_id: The heuristically assigned identifier of the cluster to which an offer belongs</li>
+              <li>category: One of 25 product categories the product was assigned to</li>
+              <li>title: The product offer title</li>
+              <li>description: The product offer description</li>
+              <li>brand: The product offer brand</li>
+              <li>price: The product offer price</li>
+              <li>specTableContent: The specification table content found on the website of the product offer as one string</li>
+              <li>keyValuePairs: The key-value pairs that were extracted from the specification tables.</li>
+          </ul>
+          <p class="card-text">The following example shows what a product offer looks like in JSON format:</p>
+            <img src="img/product-offer-example.png" width="100%" />
+            <p/>
+            <p class="card-text">We also offer an example of a training set that we derived from the corpus. The training set contains pairs of matching and non-matching offers from the category computer products. You can use this example set for training your matchers. The example training set contains 68K offer pairs from 772 distinct products (clusters of offers). These products will only partly overlap with the products in the test set that we will release in June.  We thus suggest that participating teams construct their own training sets from the corpus having higher coverage of distinct products. Every JSON object in the training set describes a pair of offers (left offer - right offer) using the offer attributes listed above together with their corresponding matching label.</p>
+            <p class="card-text">The following example shows what a product offer pair looks like in JSON format:</p>
+            <img src="img/product-offer-pair-example.png" width="100%" />
+            <p/>
+            <p class="card-text">The validation and test sets will be released in CSV format. Each dataset will contain pairs of offer ids and the label ‘True’ for matching pairs and ‘False’ for non-matching pairs. Both sets are constructed from offer pairs from the category Computers and Accessories. All pairs of offers in the validation and test sets are manually labeled. Using the example training set to train <a href="https://dl.acm.org/doi/abs/10.1145/3183713.3196926">deepmatcher</a>, a state-of-the-art matching method, achieves 90.8% F1 on the validation set. However, the test set of this challenge will be more difficult as (amongst other challenges) it will contain offers from clusters (products) that are not contained either in the training set or in the validation set.</p>
+            <p class="card-text">Additional information about the assembly of the example training set, the validation set, as well as the results of baseline experiments using both artefacts are found <a href="https://webdatacommons.org/largescaleproductcorpus/v2/index.html">here.</a></p>
+            <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
+            <p class="card-text">Precision, Recall and F1 score on the positive class (matching) will be calculated. The F1 score on the positive class (matching) will be used to rank the participating systems.</p>
+            <h4 class="card-title"><b style="color:#333333">Data download</b></h4>
+            <ul>
+  				<li><a href="#">Product Data Corpus (~16M offers)</a>: available by 16 March 2020</li>
+          <li><a href="#">Example training Set (~68K offer pairs)</a>: available by 16 March 2020</li>
+          <li><a href="#">Validation Set (1.1K offer pairs)</a>: available by 16 March 2020</li>
+  				<li><a href="#">Test set (600 offer pairs)</a>: available by 01 June 2020</li>
 			</ul>
 
 			<h4 class="card-title"><b style="color:#333333">Tools</b></h4>
-			<p class="card-text">Our <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodmatch">GitHub website</a> is currently being updated and will be ready by 16 March 2016. It will provide code for: [TODO: Manheim please edit as you see fit. But at least, I'd suggest some code for parsing the data and scoring results]</p>
-			<ul>
-  				<li>Parsing the input datasets</li>
-  				<li>Scoring the output prepared in the required format (see <a href="#submit">the Submission section</a> for details)</li>
-  				<li>Baseline</li>
-			</ul>
-			<p class="card-text">Details can be found on the corresponding GitHub page.</p>
+			<p class="card-text">Use your favourite JSON parser to parse the datasets. We suggest using the Python pandas package to parse each file into a dataframe:
+        <pre><code>import pandas as pd<br><br>df = pd.read_json(filename, lines=True)</code></pre></p>
           </div>
         </div>
       </div>
@@ -224,8 +238,13 @@
             <p class="card-text"><b>Due: 15 June 2020</b>. For both tasks, please name your submission in the following pattern: [Team]_[Task1/2] where 'Team' should be a short name to identify your team. This will be used to list participant results. 'Task1/2' should be either 'Task1' or 'Task2' depending on which task you participate in. If you take part in both tasks, please make two separate submissions.</p>
 
             <h5 class="card-title"><b style="color:#333333">Task one - product matching</b></h4>
-            <p class="card-text">[Please add details]</p>
-
+            <p class="card-text">Submit your output as a <b>single, zip file</b> through this <a href="https://script.google.com/a/sheffield.ac.uk/macros/s/AKfycbyOtAMYWvZISZVUPPmCBd9DUngwJIlRZgZqAPM4TQUKXxRTbhA/exec">Google form link</a>. The zip file must contain a single CSV file conforming to the following format:</p>
+            <ul>
+              <li>One offer pair on each row</li>
+              <li>Comma separated</li>
+              <li>Column 1=left offer id, column 2=right offer id and column 3=True/False</li>
+          </ul>
+          <p class="card-text">An example is shown below:<pre><code>123456,654321,True<br>123456,987654,False</code></pre></p>
             <h5 class="card-title"><b style="color:#333333">Task two - product classification</b></h4>
             <p class="card-text">Submit your output as a <b>single, zip file</b> through this <a href="https://script.google.com/a/sheffield.ac.uk/macros/s/AKfycbyOtAMYWvZISZVUPPmCBd9DUngwJIlRZgZqAPM4TQUKXxRTbhA/exec">Google Form link</a>. The zip file must contain a single CSV file comforming to the following format:</p>
 
