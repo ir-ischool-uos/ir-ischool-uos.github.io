@@ -180,7 +180,7 @@
             <ul>
   				<li>ID: an arbitrary ID of the product</li>
   				<li>Name: the name of the product (an empty string if unavailable)</li>
-  				<li>Description: the description of the product (an empty string if unavailable)</li>
+  				<li>Description: the description of the product (truncated to a maximum of 5,000 characters. Can be an empty string if unavailable)</li>
   				<li>CategoryText: website-specific product category, or breadcrum (an empty string if unavailable)</li>
   				<li>URL: the original webpage URL of the product</li>
   				<li>lvl1: the level 1 GS1 GPC classification (i.e., classification target)</li>
@@ -221,7 +221,7 @@
           <div class="card-body">
             <h3 class="card-title"><b style="color:#333333">Other Resources</b></h3>
             <p class="card-text">Participants are free to decide if they would like to use any of these resources to support their development</p>
-            <p class="card-text">To support the development of systems we have created language resources that may be useful for both tasks. We processed the <a href="http://data.dws.informatik.uni-mannheim.de/structureddata/2017-12/quads/classspecific/schema_Product.gz">2017 November WDC crawl of all entities</a> that are an instance of http://schema.org/Product or http://schema.org/Offer, and indexed the products (English only) using <a href="https://lucene.apache.org/solr/">Solr</a> 7.3.0. We then exported the descriptions of these products (if available) and used the data (some heuristic-based filtering is applied) to train word embeddings using the Gensim implementation of <a href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>. We share the following resources that can be used by participants:</p>
+            <p class="card-text">To support the development of systems we have created language resources that may be useful for both tasks. We processed the <a href="http://data.dws.informatik.uni-mannheim.de/structureddata/2017-12/quads/classspecific/schema_Product.gz">2017 November WDC crawl of all entities</a> that are an instance of http://schema.org/Product or http://schema.org/Offer, and indexed the products (English only) using <a href="https://lucene.apache.org/solr/">Solr</a> 7.3.0. We then exported the descriptions (if available) of these products and used the data (some heuristic-based filtering is applied, resulting in over 150 million products) to train word embeddings using the Gensim implementation of <a href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>. We share the following resources that can be used by participants:</p>
             <ul>
   				<li>The word embeddings trained using the <a href="https://drive.google.com/open?id=1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl">continuous Bag-of-Words model</a> and the <a href="https://drive.google.com/open?id=1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl">Skip-gram</a> model (6GB each)</li>
   				<li><a href='https://drive.google.com/open?id=1lbhhhV29QqBm6b-awTJVKEjlytVcg7XQ'>The text corpus</a> used to train the embeddings (11GB)</li>
