@@ -147,8 +147,7 @@
             <p/>
             <p class="card-text">The validation and test sets will be released in CSV format. Each dataset will contain pairs of offer ids and the label ‘True’ for matching pairs and ‘False’ for non-matching pairs. Both sets are constructed from offer pairs from the category Computers and Accessories. All pairs of offers in the validation and test sets are manually labeled. Using the example training set to train <a href="https://dl.acm.org/doi/abs/10.1145/3183713.3196926">deepmatcher</a>, a state-of-the-art matching method, achieves 90.8% F1 on the validation set. However, the test set of this challenge will be more difficult as (amongst other challenges) it will contain offers from clusters (products) that are not contained either in the training set or in the validation set.</p>
             <p class="card-text">Additional information about the assembly of the example training set, the validation set, as well as the results of baseline experiments using both artefacts are found <a href="http://webdatacommons.org/largescaleproductcorpus/v2/index.html">here.</a></p>
-            <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
-            <p class="card-text">Precision, Recall and F1 score on the positive class (matching) will be calculated. The F1 score on the positive class (matching) will be used to rank the participating systems.</p>
+
             <h4 class="card-title"><b style="color:#333333">Data download</b></h4>
             <ul>
   				<li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/offers_corpus_english_v2_swc.json.gz">Product Data Corpus (~16M offers)</a> </li>
@@ -157,6 +156,9 @@
   				<li><a href="#">Test set (600 offer pairs)</a>: available by 01 June 2020</li>
 			</ul>
 
+            <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
+            <p class="card-text">Precision, Recall and F1 score on the positive class (matching) will be calculated. The F1 score on the positive class (matching) will be used to rank the participating systems.</p>
+            
 			<h4 class="card-title"><b style="color:#333333">Tools</b></h4>
 			<p class="card-text">Use your favourite JSON parser to parse the datasets. We suggest using the Python pandas package to parse each file into a dataframe:
         <pre><code>import pandas as pd<br><br>df = pd.read_json(filename, lines=True)</code></pre></p>
@@ -192,8 +194,6 @@
             <p class="card-text">An example screenshot (formatted as 'pretty-print') is shown below.</p>
             <img src="img/prodcls_input.png" width="100%" />
             <p/>
-            <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
-            <p class="card-text">For each classification level, the standard Precision, Recall and F1 will be used and a Weighted-Average macro-F1 will be calculated over all classes. Then the average of the WAF1 of the three levels will be calculated and used to rank the participating systems.</p>
 
             <h4 class="card-title"><b style="color:#333333">Data download</b></h4>
 
@@ -202,6 +202,58 @@
   				<li><a href="#">Validation set</a>: available by 16 March 2020 (contains approx. 3k instances)</li>
   				<li><a href="#">Test set</a>: available by 01 June 2020 (contains approx. 3k instances) </li>
 			</ul>
+
+			
+            <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
+            <p class="card-text">For each classification level, the standard Precision, Recall and F1 will be used and a Weighted-Average macro-F1 will be calculated over all classes. Then the average of the WAF1 of the three levels will be calculated and used to rank the participating systems.</p>
+            <p class="card-text">A basline is developed to support participants. This is the same as that used in the <a href='https://sigir-ecom.github.io/ecom18DCPapers/ecom18DC_paper_13.pdf'>Rakuten Data Challenge</a>. Implementation of this baselin is available in our GitHub repository (see below). Details of the baseline:</p>
+            <ul>
+  				<li>Based on the <a href='https://fasttext.cc/'>FastText algorithm</a></li>
+  				<li>Uses only product titles/names, which are all lowercased and lemmatised (using NLTK)</li>
+  				<li>Does not use pre-trained word embeddings</li>
+			</ul>
+			<p>An overview of the performance of the baseline and its variants on the <b>validation</b> set are shown below for reference (note that only the figures marked in <span style="background-color: yellow">yellow</span> are used for comparison with participating systems). Details (including P, R, F1 for each level of classification) of these results can be found <a href='results.xlsx'>here</a></p>
+
+			<table class="table table-hover" id="prodcls_baseline">
+              <thead>
+                <tr>
+                  <th scope="col">Model</th>
+                  <th scope="col" colspan="3">Weighted Avg. P, R, F1</th>
+                  <th scope="col" colspan="3">Macro Avg. P, R, F1</th>
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td><span style="background-color: yellow">Baseline</span></td>
+                  <td><span style="background-color: yellow">85.490</span></td>
+                  <td><span style="background-color: yellow">84.054</span></td>
+                  <td><span style="background-color: yellow">84.127</span></td>
+                  <td>65.216</td>
+                  <td>59.964</td>
+                  <td>60.622</td>
+                </tr>
+                <tr>
+                  <td>Baseline + word embeddings (CBOW, see <a href='#resources'>below</a>)</td>
+                  <td>86.252</td>
+                  <td>85.805</td>
+                  <td>85.502</td>
+                  <td>69.803</td>
+                  <td>63.007</td>
+                  <td>64.633</td>
+                </tr>
+                <tr>
+                  <td>Baseline + word embeddings (Skipgram, see <a href='#resources'>below</a>)</td>
+                  <td>85.137</td>
+                  <td>84.663</td>
+                  <td>84.282</td>
+                  <td>69.798</td>
+                  <td>61.953</td>
+                  <td>63.899</td>
+                </tr>                
+              </tbody>
+            </table>
+
+            
 
 			<h4 class="card-title"><b style="color:#333333">Tools</b></h4>
 			<p class="card-text">Our <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodcls">GitHub website</a> is currently being updated and will be ready by 16 March 2016. It will provide code for:</p>
@@ -223,9 +275,14 @@
             <p class="card-text">Participants are free to decide if they would like to use any of these resources to support their development</p>
             <p class="card-text">To support the development of systems we have created language resources that may be useful for both tasks. We processed the <a href="http://data.dws.informatik.uni-mannheim.de/structureddata/2017-12/quads/classspecific/schema_Product.gz">2017 November WDC crawl of all entities</a> that are an instance of http://schema.org/Product or http://schema.org/Offer, and indexed the products (English only) using <a href="https://lucene.apache.org/solr/">Solr</a> 7.3.0. We then exported the descriptions (if available) of these products and used the data (some heuristic-based filtering is applied, resulting in over 150 million products) to train word embeddings using the Gensim implementation of <a href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>. We share the following resources that can be used by participants:</p>
             <ul>
-  				<li>The word embeddings trained using the <a href="https://drive.google.com/open?id=1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl">continuous Bag-of-Words model</a> and the <a href="https://drive.google.com/open?id=1gZsOjZGeiIwLI_jHHk-_weTH9F5OyhHl">Skip-gram</a> model (6GB each). Both are trained using Gensim 3.4.0, and saved in the Gensim format. Load the models using <pre><code>gensim.models.KeyedVectors.load('file_goes_here', mmap='r')</code></pre></li>
-  				<li><a href='https://drive.google.com/open?id=1lbhhhV29QqBm6b-awTJVKEjlytVcg7XQ'>The text corpus</a> used to train the embeddings (11GB)</li>
+            	<li><a href='https://drive.google.com/open?id=1lbhhhV29QqBm6b-awTJVKEjlytVcg7XQ'>The text corpus</a> containing the above product descriptions (11GB)</li>
+  				<li>The word embeddings trained using the above corpus (lowercased). Both continuous bag-of-words and skipgram models are available, and are trained using Gensim 3.4.0. Available in the following two formats:</li>
+  				<ul>
+  					<li><a href="https://drive.google.com/open?id=1g9zNEMP0GdAdDIF-zFK5RdW8cLasrUPx">Gensim format</a>. This is optimised for speedy loading of the model and is also more memory-efficient. Use the code <pre><code>gensim.models.KeyedVectors.load([embedding_file_ending_with_bin]], mmap='r')</code></pre> to load the model.</li>
+  					<li><a href="https://drive.google.com/open?id=1dgWaD1_TWc3VBQxRZWCNynhfiRFCOSYU">Word2Vec non-binary (text) format</a>. This is needed if you want to run the FastText baseline. However, this model file is not optimised for memory usage or speed.</li>
+  				</ul>   				
 			</ul>
+			<p>The effect of the word embeddings is demonstrated in the table in the Section <a href='#evaluation'>Evaluation metrics</a></p>
           </div>
         </div>
       </div>
