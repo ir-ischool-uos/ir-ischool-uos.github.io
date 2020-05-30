@@ -145,8 +145,8 @@
             <h4 class="card-title"><b style="color:#333333">Data format</b></h4>
             <p class="card-text">We offer the product data corpus in JSON format. Offers having the same cluster ID attribute are considered to describe the same real-world product while different cluster IDs signify different products. The grouping of offers into clusters is subject to some degree of noise (approx. 7%) as it has been constructed using a <a href="https://dl.acm.org/doi/10.1145/3308560.3316609">heuristic</a> to cleanse the product identifiers, such as GTINs and MPNs, found on the Web. Every JSON object describing an offer has the following JSON properties:</p>
             <ul>
-              <li>id: Unique identifier of an offer (random integer)</li>
-              <li>cluster_id: The heuristically assigned identifier of the cluster to which an offer belongs</li>
+              <li>id: Unique identifier of an offer (random integer) (DO NOT USE AS FEATURE!)</li>
+              <li>cluster_id: The heuristically assigned identifier of the cluster to which an offer belongs (DO NOT USE AS FEATURE!)</li>
               <li>category: One of 25 product categories the product was assigned to</li>
               <li>title: The product offer title</li>
               <li>description: The product offer description</li>
@@ -162,7 +162,7 @@
             <p class="card-text">The following example shows what a product offer pair looks like in JSON format:</p>
             <img src="img/product-offer-pair-example.png" width="100%" />
             <p/>
-            <p class="card-text">The validation and test sets will be released in CSV format. Each dataset will contain pairs of offer ids and the label ‘True’ for matching pairs and ‘False’ for non-matching pairs. Both sets are constructed from offer pairs from the category Computers and Accessories. All pairs of offers in the validation and test sets are manually labeled. Using the example training set to train <a href="https://dl.acm.org/doi/abs/10.1145/3183713.3196926">deepmatcher</a>, a state-of-the-art matching method, achieves 90.8% F1 on the validation set. However, the test set of this challenge will be more difficult as (amongst other challenges) it will contain offers from clusters (products) that are not contained either in the training set or in the validation set.</p>
+            <p class="card-text">The validation and test sets will also be released in JSON format. The validation set has the same structure as the training set while the test set will be released without the label column. Both sets are constructed from offer pairs from the category Computers and Accessories. All pairs of offers in the validation and test sets are manually labeled. Using the example training set to train <a href="https://dl.acm.org/doi/abs/10.1145/3183713.3196926">deepmatcher</a>, a state-of-the-art matching method, achieves 90.8% F1 on the validation set. However, the test set of this challenge will be more difficult as (amongst other challenges) it will contain offers from clusters (products) that are not contained either in the training set or in the validation set.</p>
             <p class="card-text">Additional information about the assembly of the example training set, the validation set, as well as the results of baseline experiments using both artefacts are found <a href="http://webdatacommons.org/largescaleproductcorpus/v2/index.html">here.</a></p>
 
             <h4 class="card-title"><b style="color:#333333">Data download</b></h4>
@@ -170,7 +170,7 @@
   				<li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/offers_corpus_english_v2_swc.json.gz">Product Data Corpus (~16M offers)</a> </li>
           <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/computers_train_xlarge.json.gz">Example training Set (~68K offer pairs)</a></li>
           <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/computers_validation.json.gz">Validation Set (1.1K offer pairs)</a></li>
-  				<li><a href="http://ge.tt/4JbSC443/v/0">Test set (600 offer pairs)</a></li>
+  				<li><a href="http://ge.tt/4JbSC443/v/0">Test set (1500 offer pairs)</a></li>
 			</ul>
 
             <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
@@ -320,9 +320,9 @@
             <ul>
               <li>One offer pair on each row</li>
               <li>Comma separated</li>
-              <li>Column 1=left offer id, column 2=right offer id and column 3=True/False</li>
+              <li>Column 1=left offer id, column 2=right offer id and column 3=label (1 or 0)</li>
           </ul>
-          <p class="card-text">An example is shown below:<pre><code>123456,654321,True<br>123456,987654,False</code></pre></p>
+          <p class="card-text">An example for a predicted match and non-match is shown below:<pre><code>123456,654321,1<br>123456,987654,0</code></pre></p>
             <h5 class="card-title"><b style="color:#333333">Task two - product classification</b></h4>
             <p class="card-text">Submit your output as a <b>single, zip file</b> through this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYLaBrxnqh9Q9gsJKy1Qnw3aOkbXS8elpTYVzVFsLN0BXY6w/viewform">Google Form link</a>. The zip file must contain a single CSV file comforming to the following format:</p>
 
