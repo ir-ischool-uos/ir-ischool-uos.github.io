@@ -46,6 +46,7 @@
             <h3 class="card-title"><b style="color:#333333">News</b></h3>
             <ul>
               <li><img src="img/pin.jpeg" width="30px" /><span style="color: red">Winners of each task will be awarded 500 euro!</span> (Partly sponsored by <a href="https://www.peakindicators.com/">Peak Indicators</a>)</li>
+              <li>22 June 2020: the validation set for the product classification task has been updated, removing labels not present in the training set. The test set is unchanged. This slightly affected the baseline performance, which is now updated too.</li>
               <li>1 June 2020: Test datasets are released for both the product <a href="https://bit.ly/2Yr0dkb">classification</a> and <a href="https://bit.ly/2Awc9ZV">matching</a> tasks!</li>
               <li>14 May 2020: In line with the ISWC2020 deadline extensions, we announce an extension of the submission deadlines of our event. System output submission is now 06 July 2020. Please see the 'Important Dates' section for details.</li>
               <li>16 April 2020: We have released some <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodmatch">example code</a> for building your own training sets for the product matching task.</li>
@@ -243,30 +244,30 @@
               <tbody>
               	<tr>
                   <td><span style="background-color: yellow">Baseline</span></td>
-                  <td><span style="background-color: yellow">85.490</span></td>
-                  <td><span style="background-color: yellow">84.054</span></td>
-                  <td><span style="background-color: yellow">84.127</span></td>
-                  <td>65.216</td>
-                  <td>59.964</td>
-                  <td>60.622</td>
+                  <td><span style="background-color: yellow">85.553</span></td>
+                  <td><span style="background-color: yellow">84.167</span></td>
+                  <td><span style="background-color: yellow">84.255</span></td>
+                  <td>66.164</td>
+                  <td>60.709</td>
+                  <td>61.542</td>
                 </tr>
                 <tr>
                   <td>Baseline + word embeddings (CBOW, see <a href='#resources'>below</a>)</td>
-                  <td>86.252</td>
-                  <td>85.805</td>
-                  <td>85.502</td>
-                  <td>69.803</td>
-                  <td>63.007</td>
-                  <td>64.633</td>
+                  <td>86.498</td>
+                  <td>86.000</td>
+                  <td>85.734</td>
+                  <td>70.639</td>
+                  <td>63.925</td>
+                  <td>65.551</td>
                 </tr>
                 <tr>
                   <td>Baseline + word embeddings (Skipgram, see <a href='#resources'>below</a>)</td>
-                  <td>85.137</td>
-                  <td>84.663</td>
-                  <td>84.282</td>
-                  <td>69.798</td>
-                  <td>61.953</td>
-                  <td>63.899</td>
+                  <td>85.453</td>
+                  <td>84.911</td>
+                  <td>84.575</td>
+                  <td>70.574</td>
+                  <td>62.740</td>
+                  <td>64.693</td>
                 </tr>                
               </tbody>
             </table>
