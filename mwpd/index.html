@@ -172,13 +172,33 @@
             <p/>
             <p class="card-text">The validation and test sets will also be released in JSON format. The validation set has the same structure as the training set while the test set will be released without the label column. Both sets are constructed from offer pairs from the category Computers and Accessories. All pairs of offers in the validation and test sets are manually labeled. Using the example training set to train <a href="https://dl.acm.org/doi/abs/10.1145/3183713.3196926">deepmatcher</a>, a state-of-the-art matching method, achieves 90.8% F1 on the validation set. However, the test set of this challenge will be more difficult as (amongst other challenges) it will contain offers from clusters (products) that are not contained either in the training set or in the validation set.</p>
             <p class="card-text">Additional information about the assembly of the example training set, the validation set, as well as the results of baseline experiments using both artefacts are found <a href="http://webdatacommons.org/largescaleproductcorpus/v2/index.html">here.</a></p>
+            <h4 class="card-title"><b style="color:#333333">Round 2 Hints</b></h4>
+            <p class="card-text">For Round 2 we publish some information about the composition of the test set. More specifically we will also provide each team of Round 1 with Precision, Recall and F1 values for 5 meta-classes that product pairs in the test set can be categorized into. We use specific vocabulary when refering to these classes:</p>
+            <ul>
+              <li>"Known products" means products from clusters that have training data in the provided training set</li>
+              <li>"New products" are contained in the overall corpus but not in the provided training set</li>
+              <li>"High and low similarity" refers to jaccard similarity on titles</li>
+              <li>"Very hard case" means either highly similar negatives or dissimilar positives</li>
+          </ul>
+          <p class="card-text">The amount of positives and negatives of each of the classes found in the test set can be seen after each class name in the list below. The remaining 1000 products of the test set not directly part of the 5 meta-classes could mostly be assigned to the class "very hard cases for known products" but are not as similar/dissimilar on the titles as the very hard cases. A small rest are new products not belonging into any of the five meta-classes.</p>
+            
+          <p class="card-text">The five meta-classes are:</p>
+          <ul>
+              <li>New products with high similarity with known products (25 pos / 75 neg)</li>
+              <li>New products with low similarity with known products (25 pos / 75 neg)</li>
+              <li>Known products with introduced typos (100 pos)</li>
+              <li>Known products with dropped tokens (100 pos)</li>
+              <li>Very hard cases for known products (25 pos / 75 neg)</li>
+          </ul>
+          <p class="card-text">A small example set containing pairs and ground truth for the five classes can be found in the Data download section below. The "sampling" column in this dataset provides information about the meta-class to which an example belongs. Note that the examples for "known products with introduced typos" and "known products with dropped tokens" are actually modified versions of the examples for the "very hard cases for known products" class, allowing for an inspection of the extent of such modifications. </p>
 
             <h4 class="card-title"><b style="color:#333333">Data download</b></h4>
             <ul>
   				<li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/offers_corpus_english_v2_swc.json.gz">Product Data Corpus (~16M offers)</a> </li>
           <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/computers_train_xlarge.json.gz">Example training Set (~68K offer pairs)</a></li>
           <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/computers_validation.json.gz">Validation Set (1.1K offer pairs)</a></li>
-  				<li><a href="https://bit.ly/2Awc9ZV">Test set (1500 offer pairs)</a></li>
+          <li><a href="https://bit.ly/2Awc9ZV">Test set (1500 offer pairs)</a></li>
+          <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/example_set_round2.json.gz">Example Set Feedback Meta-Classes (24 offer pairs)</a></li>
 			</ul>
 
             <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
