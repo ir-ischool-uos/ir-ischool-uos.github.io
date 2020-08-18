@@ -45,8 +45,10 @@
           <div class="card-body">
             <h3 class="card-title"><b style="color:#333333">News</b></h3>
             <ul>
-              <li><img src="img/pin.jpeg" width="30px" /><span style="color: red">The first round of the competition has ended. Congratulations to Team <span style="color: black">Rhinobird</span> (from <a href="https://en.tongji.edu.cn/">Tongji University of China</a>, and <a href="https://www.tencent.com/">Tencent</a>) for winning both tasks and the prize of 1,000 euro! Full results <a href="#results">here</a>.</li>
-              <li>13 July 2020: the <span style="color: red">second round</span> of competion is NOW OPEN! Due to popular demand, we decided to run a second round of competition. See details <a href="#rounds">here</a>.</li>
+              <li><img src="img/pin.jpeg" width="30px" /><span style="color: red">Congratulations to Team <span style="color: black">Rhinobird</span> (from <a href="https://en.tongji.edu.cn/">Tongji University of China</a>, and <a href="https://www.tencent.com/">Tencent</a>) for winning both tasks in Round 1, and the prize of 1,000 euro! Round 1 results <a href="#results">here</a>.</li>
+              <li>17 August 2020: the ground truth for both tasks are now released. Download them here: <a href="#data1">task 1</a> and <a href="#data2">task 2</a>.</li>
+              <li>17 August 2020: the second round of competion has now ended. See Round 2 results <a href="#results">here</a>.</li>
+              <li>13 July 2020: the second round of competion is NOW OPEN! Due to popular demand, we decided to run a second round of competition. See details <a href="#rounds">here</a>.</li>
               <li>22 June 2020: the validation set for the product classification task has been updated, removing labels not present in the training set. The test set is unchanged. This slightly affected the baseline performance, which is now updated too.</li>
               <li>1 June 2020: Test datasets are released for both the product <a href="https://bit.ly/2Yr0dkb">classification</a> and <a href="https://bit.ly/2Awc9ZV">matching</a> tasks!</li>
               <li>14 May 2020: In line with the ISWC2020 deadline extensions, we announce an extension of the submission deadlines of our event. System output submission is now 06 July 2020. Please see the 'Important Dates' section for details.</li>
@@ -116,12 +118,12 @@
                   <td><strike>Round One publication of system results</strike></td>
                 </tr>
                 <tr>
-                  <td>13 July 2020</td>
-                  <td>Round 2 submission open</td>
+                  <td><strike>13 July 2020</strike></td>
+                  <td><strike>Round 2 submission open</strike></td>
                 </tr>
                 <tr>
-                  <td>17 Aug 2020 (23:59:59 Hawaiian time GMT-10)</td>
-                  <td>Round 2 submission end</td>
+                  <td><strike>17 Aug 2020 (23:59:59 Hawaiian time GMT-10)</strike></td>
+                  <td><strike>Round 2 submission end</strike></td>
                 </tr>               
                 <tr>
                   <td>02 Sep 2020 (23:59:59 Hawaiian time GMT-10)</td>
@@ -173,12 +175,13 @@
             <p class="card-text">The validation and test sets will also be released in JSON format. The validation set has the same structure as the training set while the test set will be released without the label column. Both sets are constructed from offer pairs from the category Computers and Accessories. All pairs of offers in the validation and test sets are manually labeled. Using the example training set to train <a href="https://dl.acm.org/doi/abs/10.1145/3183713.3196926">deepmatcher</a>, a state-of-the-art matching method, achieves 90.8% F1 on the validation set. However, the test set of this challenge will be more difficult as (amongst other challenges) it will contain offers from clusters (products) that are not contained either in the training set or in the validation set.</p>
             <p class="card-text">Additional information about the assembly of the example training set, the validation set, as well as the results of baseline experiments using both artefacts are found <a href="http://webdatacommons.org/largescaleproductcorpus/v2/index.html">here.</a></p>
 
-            <h4 class="card-title"><b style="color:#333333">Data download</b></h4>
+            <h4 class="card-title" id="data1"><b style="color:#333333">Data download</b></h4>
             <ul>
   				<li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/offers_corpus_english_v2_swc.json.gz">Product Data Corpus (~16M offers)</a> </li>
           <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/computers_train_xlarge.json.gz">Example training Set (~68K offer pairs)</a></li>
           <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/computers_validation.json.gz">Validation Set (1.1K offer pairs)</a></li>
   				<li><a href="https://bit.ly/2Awc9ZV">Test set (1500 offer pairs)</a></li>
+  				<li><a href="https://drive.google.com/file/d/1Xcl-z9NOJuC07lezl0t9hfGTUWqTKApS/view?usp=sharing">Test set (1500 offer pairs) with ground truth</a></li>
 			</ul>
 
             <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
@@ -221,12 +224,13 @@
             <img src="img/prodcls_input.png" width="100%" />
             <p/>
 
-            <h4 class="card-title"><b style="color:#333333">Data download</b></h4>
+            <h4 class="card-title" id="data2"><b style="color:#333333">Data download</b></h4>
 
             <ul>
   				<li><a href="https://drive.google.com/open?id=1WirDfqGvBYgly27egMx6Om9QeXO6B2UX">Training set</a> (contains approx. 10k instances)</li>
   				<li><a href="https://drive.google.com/open?id=1WirDfqGvBYgly27egMx6Om9QeXO6B2UX">Validation set</a> (contains approx. 3k instances)</li>
   				<li><a href="https://bit.ly/2Yr0dkb">Test set</a> (contains approx. 3k instances) </li>
+  				<li><a href="https://drive.google.com/file/d/1RI27LIp_s-LP10eKKNWz914bapfRhOJl/view?usp=sharing">Test set</a> (contains approx. 3k instances) with ground truth </li>
 			</ul>
 
 
@@ -360,7 +364,7 @@
             <h3 class="card-title"><b style="color:#333333">Competition results</b></h3>
             <h4 class="card-title"><b style="color:#333333">Round 1 Results on the Test set</b></h4>
             
-			<table class="table table-hover" id="round1_task1_results">
+			<table class="table table-hover" id="round1_results">
               <thead>
                 <tr>
                 	<th scope="col" colspan="4">Task 1 (product matching)</th>
@@ -451,6 +455,198 @@
               </tbody>
             </table>
             <p>* Average weighted macro F1 of all three levels. This can result in an F-score that is not between precision and recall.
+
+
+
+
+
+            <h4 class="card-title"><b style="color:#333333">Round 2 Results on the Test set</b></h4>
+            
+			<table class="table table-hover" id="round2_results">
+              <thead>
+                <tr>
+                	<th scope="col" colspan="4">Task 1 (product matching)</th>
+                	<th scope="col" colspan="4">Task 2 (product classification)</th>                  
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (positive pairs only)</b></td>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (avg. weighted*)</b></td>                
+                </tr>
+                <tr>
+                  <td>PMap</td>
+                  <td>82.04</td>
+                  <td>90.48</td>
+                  <td>86.05</td>
+                  <td>Rhinobird</td>
+                  <td>88.97</td>
+                  <td>88.72</td>
+                  <td>88.43</td>
+                </tr>
+                <tr>
+                  <td>Rhinobird</td>
+                  <td>80.63</td>
+                  <td>92.00</td>
+                  <td>85.94</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>ISCAS-ICIP</td>
+                  <td>85.77</td>
+                  <td>84.95</td>
+                  <td>85.36</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><span style="background-color: yellow">Baseline DeepMatcher</span></td>
+                  <td>70.89</td>
+                  <td>74.67</td>
+                  <td>72.73</td>
+                  <td><span style="background-color: yellow">Baseline FastText</span></td>
+                  <td>85.55</td>
+                  <td>84.17</td>
+                  <td>84.26</td>
+                </tr>                  	
+              </tbody>
+            </table>
+
+
+            <h4 class="card-title"><b style="color:#333333">Overall Results</b></h4>
+			<table class="table table-hover" id="overall_results">
+              <thead>
+                <tr>
+                	<th scope="col" colspan="4">Task 1 (product matching)</th>
+                	<th scope="col" colspan="4">Task 2 (product classification)</th>                  
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (positive pairs only)</b></td>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (avg. weighted*)</b></td>                
+                </tr>
+                <tr>
+                  <td>PMap (R2*)</td>
+                  <td>82.04</td>
+                  <td>90.48</td>
+                  <td>86.05</td>
+                  <td>Rhinobird</td>
+                  <td>89.01</td>
+                  <td>89.04</td>
+                  <td>88.62</td>
+                </tr>
+                <tr>
+                  <td>Rhinobird (R2)</td>
+                  <td>80.63</td>
+                  <td>92.00</td>
+                  <td>85.94</td>
+                  <td>Rhinobird (R2)</td>
+                  <td>88.97</td>
+                  <td>88.72</td>
+                  <td>88.43</td>
+                </tr>
+                <tr>
+                  <td>Rhinobird</td>
+                  <td>82.86</td>
+                  <td>88.38</td>
+                  <td>85.53</td>
+                  <td>Team ISI</td>
+                  <td>87.16</td>
+                  <td>86.85</td>
+                  <td>86.54</td>
+                </tr>
+                <tr>
+                  <td>ISCAS-ICIP (R2)</td>
+                  <td>85.77</td>
+                  <td>84.95</td>
+                  <td>85.36</td>
+                  <td>ASVinSpace</td>
+                  <td>86.96</td>
+                  <td>86.30</td>
+                  <td>86.10</td>
+                </tr>
+                <tr>
+                  <td>PMap</td>
+                  <td>78.33</td>
+                  <td>90.86</td>
+                  <td>84.13</td>
+                  <td>Megagon</td>
+                  <td>84.98</td>
+                  <td>84.98</td>
+                  <td>84.98</td>
+                </tr>
+                <tr>
+                  <td>ASVinSpace</td>
+                  <td>86.20</td>
+                  <td>82.10</td>
+                  <td>84.10</td>
+                  <td><span style="background-color: yellow">Baseline FastText</span></td>
+                  <td>85.55</td>
+                  <td>84.17</td>
+                  <td>84.26</td>
+                </tr>
+                <tr>
+                  <td>ISCAS-ICIP</td>
+                  <td>83.89</td>                 
+                  <td>81.33</td>
+                  <td>82.59</td>
+                  <td>DICE_UPB</td>
+                  <td>85.30</td>
+                  <td>81.49</td>
+                  <td>81.84</td>
+                </tr>
+                <tr>
+                  <td>Megagon</td>
+                  <td>82.69</td>
+                  <td>65.52</td>
+                  <td>73.11</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>    
+              	<tr>
+                  <td><span style="background-color: yellow">Baseline DeepMatcher</span></td>
+                  <td>70.89</td>
+                  <td>74.67</td>
+                  <td>72.73</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>    
+                <tr>
+                  <td>Team ISI</td>
+                  <td>78.44</td>
+                  <td>57.52</td>
+                  <td>66.37</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>                    
+              </tbody>
+            </table>
+            <p>* R2 indicates results obtained by the same team in Round 2. Otherwise, results are obtained in Round 1
+
           </div>
         </div>
       </div>
