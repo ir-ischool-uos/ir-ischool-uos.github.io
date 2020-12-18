@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<head>
+  <html lang="en">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous">
+  <link rel="stylesheet" href="swcStyle.css">
+  <meta charset="utf-8">
+  <title>Semantic Web Challenge ISWC2020</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm justify-content-center sticky-top">
+
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#news">News</a>
+        <a class="nav-item nav-link " href="#overview">Overview</a>
+        <a class="nav-item nav-link " href="#imdates">Important dates</a>
+        <a class="nav-item nav-link " href="#task1">Task One</a>
+        <a class="nav-item nav-link " href="#task2">Task Two</a>
+        <a class="nav-item nav-link " href="#submit">Submission</a>
+        <a class="nav-item nav-link " href="#resources">Other resources</a>
+        <a class="nav-item nav-link " href="#results">Results</a>
+        <a class="nav-item nav-link " href="#presentation">Conference presentation</a>
+        <a class="nav-item nav-link " href="#committee">Committee</a>
+      </div>
+  </nav>
+  <div class="container">
+
+    <div class="row mt-4">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-4"><b style="font-weight: 600;font-size: 30px;color: #4d4d4d!important;">Mining the Web of HTML-embedded Product Data</b></h1>
+        <h2 class="mt-4"><b style="font-weight: 600;font-size: 20px;color: #4d4d4d!important;">Semantic Web Challenge @</b>
+        	<a href="https://iswc2020.semanticweb.org/"><img src="img/ISWC2020_logo_is.png" width="10%" /></a></h1>
+      </div>
+    </div>
+    <!-- Page Content is in the form of cards -->
+    <div class="row" id="news">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2 ">
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">News</b></h3>
+            <ul>
+              <!--li><img src="img/pin.jpeg" width="30px" /><span style="color: red">IMPORTANT ANNOUNCEMENT: </span>due to an error during the processing of Round 1 results, the winners of the two tasks were not correctly identified. We have now rectified this error (see below) and we sincerely apologise to all participants. </ul-->
+              <li><img src="img/pin.jpeg" width="30px" /><span style="color: red">The proceedings are ready! See <a href="#proceedings">here</a>.</li>
+              <li><img src="img/pin.jpeg" width="30px" /><span style="color: red">Winners of Round 1 results are: Task 1 - </span> <span style="color: black">Team PMap</span> from the <a href="https://www.aist.go.jp/index_en.html">National Institute of Advanced Industrial Science and Technology (AIST)</a> and <a href="https://www.nii.ac.jp/en/">National Institute of Informatics (NII)</a>; and <span style="color: red">Task 2</span> - <span style="color: black">Team Rhinobird</span> from <a href="https://en.tongji.edu.cn/">Tongji University of China</a> and <a href="https://www.tencent.com/">Tencent</a>.</span> Many congratuations to the winners! Round 1 results <a href="#results">here</a>.</li>
+              <li>17 August 2020: the ground truth for both tasks are now released. Download them here: <a href="#data1">task 1</a> and <a href="#data2">task 2</a>.</li>
+              <li>17 August 2020: the second round of competion has now ended. See Round 2 results <a href="#results">here</a>.</li>
+              <li>13 July 2020: the second round of competion is NOW OPEN! Due to popular demand, we decided to run a second round of competition. See details <a href="#rounds">here</a>.</li>
+              <li>22 June 2020: the validation set for the product classification task has been updated, removing labels not present in the training set. The test set is unchanged. This slightly affected the baseline performance, which is now updated too.</li>
+              <li>1 June 2020: Test datasets are released for both the product <a href="https://bit.ly/2Yr0dkb">classification</a> and <a href="https://bit.ly/2Awc9ZV">matching</a> tasks!</li>
+              <li>14 May 2020: In line with the ISWC2020 deadline extensions, we announce an extension of the submission deadlines of our event. System output submission is now 06 July 2020. Please see the 'Important Dates' section for details.</li>
+              <li>16 April 2020: We have released some <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodmatch">example code</a> for building your own training sets for the product matching task.</li>
+            	<li>27 March 2020: Due to Covid-19, ISWC2020 has decided to <a href="https://iswc2020.semanticweb.org/">go virtual</a>. The same will apply to our event. The challenge will take place as planned and the schedule will stay unchanged. So please already start experimenting with the training and validation data, so that you are prepared for the release of the test set on 1 June. </li>
+            	<li>16 March 2020: the training and validation sets for both tasks have been released. Please scroll down to the dataset section of each task for details. You can now start testing your systems!</li>
+  				<li>02 March 2020: the first <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=100326">Call for Participation has beeen annouced</a>. The <a href="https://groups.google.com/forum/#!forum/mwpd2020">Google discussion group</a> is also open. Please join the discussion if you wish to take part in this event!</li>
+			</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="proceedings">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2">
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">CEUR proceedings</b></h3>
+            <p>CEUR link can be found <a href="http://ceur-ws.org/Vol-2720/">here</a></p>
+            <table class="table table-hover" id="proceedings_table">
+              <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Authors</th>
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td><a href="http://ceur-ws.org/Vol-2720/paper1.pdf">MWPD2020: Semantic Web Challenge on Mining the Web of HTML-embedded Product Data</a></td>
+                  <td>Ziqi Zhang, Christian Bizer, Ralph Peeters, Anna Primpeli</td>
+                </tr>
+                <tr>
+                  <td><a href="http://ceur-ws.org/Vol-2720/paper2.pdf">PMap: Ensemble Pre-training Models for Product Matchin</a></td>
+                  <td>Natthawut Kertkeidkachorn, Ryutaro Ichise</td>
+                </tr>
+                <tr>
+                  <td><a href="http://ceur-ws.org/Vol-2720/paper3.pdf">A Pre-trained Matching Model Based on Self- and Inter-ensemble For Product Matching Task</a></td>
+                  <td>Shiyao Xu, Shijia E, Li Yang, Yang Xiang</td>
+                </tr>
+                <tr>
+                  <td><a href="http://ceur-ws.org/Vol-2720/paper6.pdf">Bert with Dynamic Masked Softmax and Pseudo Labeling for Hierarchical Product Classification</a></td>
+                  <td>Li Yang, Shijia E, Shiyao Xu, Yang Xiang</td>
+                </tr>
+                <tr>
+                  <td><a href="http://ceur-ws.org/Vol-2720/paper7.pdf">ProBERT: Product Data Classification with Fine-tuning BERT Mode</a></td>
+                  <td>Hamada Zahera, Mohamed Sherif</td>
+                </tr>
+                <tr>
+                  <td><a href="http://ceur-ws.org/Vol-2720/paper4.pdf">ISCAS_ICIP at MWPD-2020 Task 1: Product Matching Based on Deep Entity Matching Frameworkss</a></td>
+                  <td>Cheng Fu, Tianshu Wang, Hao Nie, Xianpei Han, Le Sun</td>
+                </tr>
+                <tr>
+                  <td><a href="http://ceur-ws.org/Vol-2720/paper5.pdf">Language Model CNN-driven Similarity Matching and Classification for HTML-embedded Product Data</a></td>
+                  <td>Janos Borst, Erik K&ouml;rner, Kobkaew Opasjumruskit, Andreas Niekler</td>
+                </tr>               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="program">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2">
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Workshop Program</b></h3>
+            <p>Link to the conference general program <a href="https://iswc2020.semanticweb.org/program/conference-program/">here</a>. The workshop comes under the name 'SW Challenge 3, Mining'. Note that registration may be required to view it. The workshop is divided into two 1-hour slots on two separate days.</p>
+            <p>Detailed workshop program schedule below</p>
+            <table class="table table-hover" id="proogram_table">
+              <thead>
+                <tr>
+                  <th scope="col">18:00 - 19:00 CET Thursday 05 Nov 2020</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td>Introduction</td>
+                  <td>The organisers</td>
+                </tr>
+                <tr>
+                  <td>ISCAS_ICIP at MWPD-2020 Task 1: Product Matching Based on Deep Entity Matching Frameworks</td>
+                  <td>Cheng Fu, Tianshu Wang, Hao Nie, Xianpei Han, Le Sun</td>
+                </tr>
+                <tr>
+                  <td>Language Model CNN-driven Similarity Matching and Classification for HTML-embedded Product Data (TASK 1)</td>
+                  <td>Janos Borst, Erik K&ouml;rner, Kobkaew Opasjumruskit, Andreas Niekler</td>
+                </tr>
+                <tr>
+                  <td>Language Model CNN-driven Similarity Matching and Classification for HTML-embedded Product Data (TASK 2)</td>
+                  <td>Janos Borst, Erik K&ouml;rner, Kobkaew Opasjumruskit, Andreas Niekler</td>
+                </tr>
+                <tr>
+                  <td>Discussion</td>
+                  <td>All</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table table-hover" id="proogram_table2">
+              <thead>
+                <tr>
+                  <th scope="col">14:00 - 15:00 CET Friday 06 Nov 2020</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td>PMap: Ensemble Pre-training Models for Product Matching (TASK 1 Winner)</td>
+                  <td>Natthawut Kertkeidkachorn, Ryutaro Ichise</td>
+                </tr>           
+                <tr>
+                  <td>Bert with Dynamic Masked Softmax and Pseudo Labeling for Hierarchical Product Classification (TASK 2 Winner)</td>
+                  <td>Li Yang, Shijia E, Shiyao Xu, Yang Xiang</td>
+                </tr>
+                <tr>
+                  <td>Summary and prizes</td>
+                  <td>All</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row" id="overview">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2">
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Overview</b></h3>
+            <p class="card-text">Recent years have seen significant use of semantic annotations in the e-commerce domain, where online shops (e-shops) are increasingly adopting semantic markup languages to describe their products in order to improve their visibility. Statistics from the <a href="http://webdatacommons.org/structureddata/2019-12/stats/stats.html">Web Data Commons project</a> show that 37% of the websites covered by a large web crawl provide semantic annotations. 849,000 of these websites annotate product data using the schema.org classes product and offer. However, fully utilising such a gigantic data source still faces significant challenges. This is because the adoption of semantic markup practice has been generally shallow and to a certain extent inconsistent. For example, less than 10% of product instances are annotated with a category; categorisation systems used by different e-shops are highly inconsistent; the same products are offered on different websites, often presenting complementary and sometimes even conflicting information.</p>
+            <p class="card-text">Addressing these challenges requires an orchestra of semantic technologies tailored to the product domain, such as product classification, product offer matching, and product taxonomy matching. Such tasks are also crucial elements for the construction of product knowledge graphs, which are used by large, cross-sectoral e-commerce vendors.</p>
+            <p class="card-text">This challenge aims to benchmark methods and systems dealing with two fundamental tasks in e-commerce data integration: <b> (1) product matching (task one) </b> and <b> (2) product classification (task two) </b>. We develop datasets and resources to share with the community, in order to encourage and facilitate research in these directions. </p>
+            
+            <h4 class="card-title" id="rounds"><b style="color:#333333">Submission rounds</b></h4>
+            <p class="card-text"><b>Round One</b> between 01 June 2020 and 06 July 2020: Participating teams may choose to take part in either or both tasks. Winners of each task will be awarded 500 euro. This is partly sponsored by <a href="https://www.peakindicators.com/">Peak Indicators</a>.
+            <p class="card-text"><b>Round Two</b> between 13 July 2020 and 17 August 2020: Participating teams may choose to take part in either or both tasks. Participants in Round One are welcome to also take part in Round Two. They will also receive limited feedback (e.g., error types, results of different versions of their outputs) on their Round One submissions in order to help them further improve their system performance.</p>            
+            <p>Both rounds use the same datasets. Participants in both rounds will be invited to write a paper describing their method and system and present (subject to a 'light-touch' review) their work at the SWC2020 event that is part of the <a href="https://iswc2020.semanticweb.org/">ISWC2020 conference</a>.</p>
+            
+            <p class="card-text">This challenge is organised by the University of Sheffield, the University of Mannheim, and Amazon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="imdates">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2" >
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Important Dates</b></h3>
+            <table class="table table-hover" id="timeline">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Milestone</th>
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td><strike>02 March 2020</strike></td>
+                  <td><strike>Google support group open. Please join the group <a href="https://groups.google.com/forum/#!forum/mwpd2020">here</a> if you wish to take part in this event </strike></td>
+                </tr>
+                <tr>
+                  <td><strike>16 March 2020</strike></td>
+                  <td><strike>Release of the training and validation sets</strike></td>
+                </tr>
+                <tr>
+                  <td><strike>01 June 2020</strike></td>
+                  <td><strike>Release of the test set (without ground truth)</strike></td>
+                </tr>
+                <tr>
+                  <td><strike>15 June 2020 (23:59:59 Hawaiian time GMT-10)</strike></td>
+                  <td><strike>Round One submission of system output</strike></td>
+                </tr>
+                <tr>
+                  <td><strike>06 July 2020 (23:59:59 Hawaiian time GMT-10)</strike></td>
+                  <td><strike>Round One submission of system output</strike></td>
+                </tr>
+                <tr>
+                  <td><strike>13 July 2020</strike></td>
+                  <td><strike>Round One publication of system results</strike></td>
+                </tr>
+                <tr>
+                  <td><strike>13 July 2020</strike></td>
+                  <td><strike>Round 2 submission open</strike></td>
+                </tr>
+                <tr>
+                  <td><strike>17 Aug 2020 (23:59:59 Hawaiian time GMT-10)</strike></td>
+                  <td><strike>Round 2 submission end</strike></td>
+                </tr>               
+                <tr>
+                  <td><strike>02 Sep 2020 (23:59:59 Hawaiian time GMT-10)</strike></td>
+                  <td><strike>Deadline for submitting the system description paper</strike></td>
+                </tr>
+                <tr>
+                  <td><strike>17 Sep 2020</strike></td>
+                  <td><strike>Notification of Acceptance for Presentation</strike></td>
+                </tr>
+                <tr>
+                  <td>05/06 Nov 2020</td>
+                  <td>Presentation at the <a href="https://iswc2020.semanticweb.org/">ISWC</a> conference</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="task1">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2">
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Task One - Product Matching</b></h3>
+            <p class="card-text">Product matching deals with identifying product offers deriving from different websites that refer to the same real-world product. In this task, product matching is handled as a binary classification problem: given two product offers decide if they describe the same product (matching) or not (non-matching).</p>
+            <h4 class="card-title"><b style="color:#333333">Background information</b></h4>
+            <p class="card-text">Product offers are published on the web together with some textual descriptions and are often accompanied by specification tables, i.e. HTML tables that contain specifications about the offer such as price or the country of origin. The syntactic, structural and semantic heterogeneity among the offers makes product matching a challenging task. </p>
+            <p class="card-text">The Web Data Commons project has released in 2018 the <a href="http://webdatacommons.org/largescaleproductcorpus/v2/index.html">WDC Product Data Corpus</a>, the largest publicly available product data corpus originating from e-shops on the Web. The corpus consists of 26 million product offers originating from 70 thousand different e-shops. Exploiting the weak supervision found on the web in the form of product identifiers, such as GTINs or MPNs, product offers are grouped into 16 million clusters. The clusters can be used to derive training sets containing matching and non-matching pairs of offers. The derived sets can in turn be used to train the actual matching methods.</p>
+            <h4 class="card-title"><b style="color:#333333">Data format</b></h4>
+            <p class="card-text">We offer the product data corpus in JSON format. Offers having the same cluster ID attribute are considered to describe the same real-world product while different cluster IDs signify different products. The grouping of offers into clusters is subject to some degree of noise (approx. 7%) as it has been constructed using a <a href="https://dl.acm.org/doi/10.1145/3308560.3316609">heuristic</a> to cleanse the product identifiers, such as GTINs and MPNs, found on the Web. Every JSON object describing an offer has the following JSON properties:</p>
+            <ul>
+              <li>id: Unique identifier of an offer (random integer) (DO NOT USE AS FEATURE!)</li>
+              <li>cluster_id: The heuristically assigned identifier of the cluster to which an offer belongs (DO NOT USE AS FEATURE!)</li>
+              <li>category: One of 25 product categories the product was assigned to</li>
+              <li>title: The product offer title</li>
+              <li>description: The product offer description</li>
+              <li>brand: The product offer brand</li>
+              <li>price: The product offer price</li>
+              <li>specTableContent: The specification table content found on the website of the product offer as one string</li>
+              <li>keyValuePairs: The key-value pairs that were extracted from the specification tables.</li>
+          </ul>
+          <p class="card-text">The following example shows what a product offer looks like in JSON format:</p>
+            <img src="img/product-offer-example.png" width="100%" />
+            <p/>
+            <p class="card-text">We also offer an example of a training set that we derived from the corpus. The training set contains pairs of matching and non-matching offers from the category computer products. You can use this example set for training your matchers. The example training set contains 68K offer pairs from 772 distinct products (clusters of offers). These products will only partly overlap with the products in the test set that we will release in June.  We thus suggest that participating teams construct their own training sets from the corpus having higher coverage of distinct products. Every JSON object in the training set describes a pair of offers (left offer - right offer) using the offer attributes listed above together with their corresponding matching label.</p>
+            <p class="card-text">The following example shows what a product offer pair looks like in JSON format:</p>
+            <img src="img/product-offer-pair-example.png" width="100%" />
+            <p/>
+            <p class="card-text">The validation and test sets will also be released in JSON format. The validation set has the same structure as the training set while the test set will be released without the label column. Both sets are constructed from offer pairs from the category Computers and Accessories. All pairs of offers in the validation and test sets are manually labeled. Using the example training set to train <a href="https://dl.acm.org/doi/abs/10.1145/3183713.3196926">deepmatcher</a>, a state-of-the-art matching method, achieves 90.8% F1 on the validation set. However, the test set of this challenge will be more difficult as (amongst other challenges) it will contain offers from clusters (products) that are not contained either in the training set or in the validation set.</p>
+            <p class="card-text">Additional information about the assembly of the example training set, the validation set, as well as the results of baseline experiments using both artefacts are found <a href="http://webdatacommons.org/largescaleproductcorpus/v2/index.html">here.</a></p>
+            <h4 class="card-title"><b id="pm-round2-hints" style="color:#333333">Round 2 Hints</b></h4>
+            <p class="card-text">For Round 2 we publish some information about the composition of the test set. More specifically we will also provide each team of Round 1 with Precision, Recall and F1 values for 5 meta-classes that product pairs in the test set can be categorized into. We use specific vocabulary when refering to these classes:</p>
+            <ul>
+              <li>"Known products" means products from clusters that have training data in the provided training set</li>
+              <li>"New products" are contained in the overall corpus but not in the provided training set</li>
+              <li>"High and low similarity" refers to jaccard similarity on titles</li>
+              <li>"Very hard case" means either highly similar negatives or dissimilar positives</li>
+          </ul>
+          <p class="card-text">The amount of positives and negatives of each of the classes found in the test set can be seen after each class name in the list below. The remaining 1000 product pairs of the test set not directly part of the 5 meta-classes could mostly be assigned to the class "very hard cases for known products" but are not as similar/dissimilar on the titles as the very hard cases. A small rest are new products not belonging into any of the five meta-classes.</p>
+            
+          <p class="card-text">The five meta-classes are:</p>
+          <ul>
+              <li>New products with high similarity with known products (25 pos / 75 neg)</li>
+              <li>New products with low similarity with known products (25 pos / 75 neg)</li>
+              <li>Known products with introduced typos (100 pos)</li>
+              <li>Known products with dropped tokens (100 pos)</li>
+              <li>Very hard cases for known products (25 pos / 75 neg)</li>
+          </ul>
+          <p class="card-text">A small example set containing pairs and ground truth for the five classes can be found in the Data download section below. The "sampling" column in this dataset provides information about the meta-class to which an example belongs. Note that the examples for "known products with introduced typos" and "known products with dropped tokens" are actually modified versions of the examples for the "very hard cases for known products" class, allowing for an inspection of the extent of such modifications. </p>
+
+            <h4 class="card-title" id="data1"><b style="color:#333333">Data download</b></h4>
+            <ul>
+  				<li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/offers_corpus_english_v2_swc.json.gz">Product Data Corpus (~16M offers)</a> </li>
+          <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/computers_train_xlarge.json.gz">Example training Set (~68K offer pairs)</a></li>
+          <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/computers_validation.json.gz">Validation Set (1.1K offer pairs)</a></li>
+
+  				<li><a href="https://bit.ly/2Awc9ZV">Test set (1500 offer pairs)</a></li>
+  				<li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/task1_testset_1500_with_labels.json.gz">Test set (1500 offer pairs) with ground truth</a></li>
+          <li><a href="http://data.dws.informatik.uni-mannheim.de/largescaleproductcorpus/data/swc/example_set_round2.json.gz">Example Set Feedback Meta-Classes (24 offer pairs)</a></li>
+			</ul>
+
+            <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
+            <p class="card-text">Precision, Recall and F1 score on the positive class (matching) will be calculated. The F1 score on the positive class (matching) will be used to rank the participating systems.</p>
+            
+			<h4 class="card-title"><b style="color:#333333">Tools</b></h4>
+			<p class="card-text">Use your favourite JSON parser to parse the datasets. We suggest using the Python pandas package to parse each file into a dataframe:
+        <pre><code>import pandas as pd<br><br>df = pd.read_json(filename, lines=True)</code></pre></p>
+        <p class="card-text"></p> You can find additional examples for building interesting training pairs and scoring your predictions on the <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodmatch">GitHub website</a> of this task</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="task2">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2">
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Task Two - Product Classification</b></h3>
+            <p class="card-text">Product classification deals with assigning predefined product category labels to product instances (e.g., iPhone X is a ‘SmartPhone’, and also ‘Electronics’). In this task, we will be using the top 3 classification levels of the <a href="https://www.gs1.org/standards/gpc">GS1 Global Product Classification scheme</a> to classify product instances. </p>
+            <h4 class="card-title"><b style="color:#333333">Background information</b></h4>
+            <p class="card-text">Same products are often sold on different websites, which generally organise their products into certain categorisation systems. However, such product categorisations differ significantly for different websites, even if they sell similar product ranges. This makes it difficult for product information integration services to collect and organise product offers on the Web.</p>
+            <p>An increasing number of studies have been carried out for automated product classification based on the product offer information made available on the Web. Initiatives such as the <a href="https://sigir-ecom.github.io/data-task.html">Rakuten Data Challenge</a> were also created to develop benchmarks for such tasks. However, the majority of such datasets have been created based on a single source of website, and using a flat classification structure.</p>
+            <p class="card-text">The Web Data Commons project released in 2014 the <a href="http://webdatacommons.org/structureddata/2014-12/products/gs.html">first product classification dataset</a> collected from multiple websites, annotated with three levels of classification labels. This dataset has been extended and is now used for the product classification task in this challenge.</p>
+            
+            <h4 class="card-title"><b style="color:#333333">Data format</b></h4>
+            <p class="card-text">Data are provided in JSON, with each line describing one product instance using the following schema. Each product will have three classification labels, corresponding to the three GS1 GPC classification levels.</p>
+            <ul>
+  				<li>ID: an arbitrary ID of the product</li>
+  				<li>Name: the name of the product (an empty string if unavailable)</li>
+  				<li>Description: the description of the product (truncated to a maximum of 5,000 characters. Can be an empty string if unavailable)</li>
+  				<li>CategoryText: website-specific product category, or breadcrum (an empty string if unavailable)</li>
+  				<li>URL: the original webpage URL of the product</li>
+  				<li>lvl1: the level 1 GS1 GPC classification (i.e., classification target)</li>
+  				<li>lvl2: the level 2 GS1 GPC classification (i.e., classification target)</li>
+  				<li>lvl3: the level 3 GS1 GPC classification (i.e., classification target)</li>
+			</ul>
+
+
+            <p class="card-text">An example screenshot (formatted as 'pretty-print') is shown below.</p>
+            <img src="img/prodcls_input.png" width="100%" />
+            <p/>
+
+            <h4 class="card-title" id="data2"><b style="color:#333333">Data download</b></h4>
+
+            <ul>
+  				<li><a href="https://drive.google.com/open?id=1WirDfqGvBYgly27egMx6Om9QeXO6B2UX">Training set</a> (contains approx. 10k instances)</li>
+  				<li><a href="https://drive.google.com/open?id=1WirDfqGvBYgly27egMx6Om9QeXO6B2UX">Validation set</a> (contains approx. 3k instances)</li>
+  				<li><a href="https://bit.ly/2Yr0dkb">Test set</a> (contains approx. 3k instances) </li>
+  				<li><a href="https://drive.google.com/file/d/1RI27LIp_s-LP10eKKNWz914bapfRhOJl/view?usp=sharing">Test set</a> (contains approx. 3k instances) with ground truth </li>
+			</ul>
+
+
+            <h4 class="card-title"><b style="color:#333333">Evaluation metric</b></h4>
+            <p class="card-text">For each classification level, the standard Precision, Recall and F1 will be used and a Weighted-Average macro-F1 will be calculated over all classes. Then the average of the WAF1 of the three levels will be calculated and used to rank the participating systems.</p>
+            <p class="card-text">A basline is developed to support participants. This is the same as that used in the <a href='https://sigir-ecom.github.io/ecom18DCPapers/ecom18DC_paper_13.pdf'>Rakuten Data Challenge</a>. Implementation of this baselin is available in our GitHub repository (see below). Details of the baseline:</p>
+            <ul>
+  				<li>Based on the <a href='https://fasttext.cc/'>FastText algorithm</a></li>
+  				<li>Uses only product titles/names, which are all lowercased and lemmatised (using NLTK)</li>
+  				<li>Does not use pre-trained word embeddings</li>
+			</ul>
+			<p>An overview of the performance of the baseline and its variants on the <b>validation</b> set are shown below for reference (note that only the figures marked in <span style="background-color: yellow">yellow</span> are used for comparison with participating systems). Details (including P, R, F1 for each level of classification) of these results can be found <a href='results.xlsx'>here</a></p>
+
+			<table class="table table-hover" id="prodcls_baseline">
+              <thead>
+                <tr>
+                  <th scope="col">Model</th>
+                  <th scope="col" colspan="3">Weighted Avg. P, R, F1</th>
+                  <th scope="col" colspan="3">Macro Avg. P, R, F1</th>
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td><span style="background-color: yellow">Baseline</span></td>
+                  <td><span style="background-color: yellow">85.553</span></td>
+                  <td><span style="background-color: yellow">84.167</span></td>
+                  <td><span style="background-color: yellow">84.255</span></td>
+                  <td>66.164</td>
+                  <td>60.709</td>
+                  <td>61.542</td>
+                </tr>
+                <tr>
+                  <td>Baseline + word embeddings (CBOW, see <a href='#resources'>below</a>)</td>
+                  <td>86.498</td>
+                  <td>86.000</td>
+                  <td>85.734</td>
+                  <td>70.639</td>
+                  <td>63.925</td>
+                  <td>65.551</td>
+                </tr>
+                <tr>
+                  <td>Baseline + word embeddings (Skipgram, see <a href='#resources'>below</a>)</td>
+                  <td>85.453</td>
+                  <td>84.911</td>
+                  <td>84.575</td>
+                  <td>70.574</td>
+                  <td>62.740</td>
+                  <td>64.693</td>
+                </tr>                
+              </tbody>
+            </table>
+
+            
+
+			<h4 class="card-title"><b style="color:#333333">Tools</b></h4>
+			<p class="card-text">Our <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodcls">GitHub website</a> is currently being updated and will be ready by 16 March 2016. It will provide code for:</p>
+			<ul>
+  				<li>Parsing the input datasets</li>
+  				<li>Scoring the output prepared in the required format (see <a href="#Submission">the Submission section</a> for details)</li>
+  				<li>Baseline, which is a FastText implementation same as that in the Rakuten Data Challenge</li>
+			</ul>
+			<p class="card-text">Details can be found on the corresponding GitHub page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="resources">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2" >
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Other Resources</b></h3>
+            <p class="card-text">Participants are free to decide if they would like to use any of these resources to support their development</p>
+            <p class="card-text">To support the development of systems we have created language resources that may be useful for both tasks. We processed the <a href="http://data.dws.informatik.uni-mannheim.de/structureddata/2017-12/quads/classspecific/schema_Product.gz">2017 November WDC crawl of all entities</a> that are an instance of http://schema.org/Product or http://schema.org/Offer, and indexed the products (English only) using <a href="https://lucene.apache.org/solr/">Solr</a> 7.3.0. We then exported the descriptions (if available) of these products and used the data (some heuristic-based filtering is applied, resulting in over 150 million products) to train word embeddings using the Gensim implementation of <a href="https://radimrehurek.com/gensim/models/word2vec.html">Word2Vec</a>. We share the following resources that can be used by participants:</p>
+            <ul>
+            	<li><a href='https://drive.google.com/open?id=1lbhhhV29QqBm6b-awTJVKEjlytVcg7XQ'>The text corpus</a> containing the above product descriptions (11GB)</li>
+  				<li>The word embeddings trained using the above corpus (lowercased). Both continuous bag-of-words and skipgram models are available, and are trained using Gensim 3.4.0. Available in the following two formats:</li>
+  				<ul>
+  					<li><a href="https://drive.google.com/open?id=1g9zNEMP0GdAdDIF-zFK5RdW8cLasrUPx">Gensim format</a>. This is optimised for speedy loading of the model and is also more memory-efficient. Use the code <pre><code>gensim.models.KeyedVectors.load([embedding_file_ending_with_bin]], mmap='r')</code></pre> to load the model.</li>
+  					<li><a href="https://drive.google.com/open?id=1dgWaD1_TWc3VBQxRZWCNynhfiRFCOSYU">Word2Vec non-binary (text) format</a>. This is needed if you want to run the FastText baseline. However, this model file is not optimised for memory usage or speed.</li>
+  				</ul>   				
+			</ul>
+			<p>The effect of the word embeddings is demonstrated in the table in the Section <a href='#evaluation'>Evaluation metrics</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="submit">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2">
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Submission</b></h3>
+            <p class="card-text"><span style="color:red">Round 2 submission is now open</span>. Please find details of the required submissions and their formats below.</p>
+
+            <h4 class="card-title"><b style="color:#333333">System outputs</b></h4>
+            <p class="card-text">For both tasks, please name your submission in the following pattern: [Team]_[Task1/2] where 'Team' should be a short name to identify your team. This will be used to list participant results. 'Task1/2' should be either 'Task1' or 'Task2' depending on which task you participate in. If you take part in both tasks, please make two separate submissions.</p>
+
+            <h5 class="card-title"><b style="color:#333333">Task one - product matching</b></h4>
+            <p class="card-text">Submit your output as a <b>single, zip file</b> through this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYLaBrxnqh9Q9gsJKy1Qnw3aOkbXS8elpTYVzVFsLN0BXY6w/viewform">Google form link</a>. The zip file must contain a single CSV file conforming to the following format:</p>
+            <ul>
+              <li>One offer pair on each row</li>
+              <li>Comma separated</li>
+              <li>Column 1=left offer id, column 2=right offer id and column 3=label (1 or 0)</li>
+          </ul>
+          <p class="card-text">An example for a predicted match and non-match is shown below:<pre><code>123456,654321,1<br>123456,987654,0</code></pre></p>
+            <h5 class="card-title"><b style="color:#333333">Task two - product classification</b></h4>
+            <p class="card-text">Submit your output as a <b>single, zip file</b> through this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYLaBrxnqh9Q9gsJKy1Qnw3aOkbXS8elpTYVzVFsLN0BXY6w/viewform">Google Form link</a>. The zip file must contain a single CSV file comforming to the following format:</p>
+
+            <ul>
+  				<li>One product instance on each row</li>
+  				<li>Comma separated</li>
+  				<li>Column 1=product ID as-is in the test set, column 2=Level 1 label, column 3=Level 2 label, and column 4=Level 3 label</li>
+  				<li>Use UTF-8 encoding</li>
+			</ul>
+
+			<p class="card-text">An example is available in the <a href="https://github.com/ir-ischool-uos/mwpd/tree/master/prodcls">GitHub website</a>. A dummy example is also shown in the following screenshot.</p>
+			<img src="img/prodcls_output.png" width="100%" />
+			<p/>
+            <h4 class="card-title"><b style="color:#333333">System description paper</b></h4>
+            <p class="card-text">Tentative deadline for submission: 23:59:59 Hawaiian Time 02 Sep 2020, <a href="https://easychair.org/conferences/?conf=mwpd2020">submission link</a> here.</p>
+            <p class="card-text">Submissions of research articles to this event are based on participation only. Papers submitted must conform to the formatting requirements of the ISWC main conference, and must be within the range of 5-8 pages. Specifically, they must be either in PDF or HTML, formatted in the style of the Springer Publications format for <a href="http://www.springer.com/lncs">Lecture Notes in Computer Science (LNCS)</a>. For HTML submission guidance, please see the <a href="https://iswc2020.semanticweb.org/authors/html-submission-guide/">HTML submission guide</a>.</p>
+            <p class="card-text">Papers submitted will undergo a brief review process for quality assurance. Where appropriate, feedback may be provided to authors for consideration to improve the quality of their submissions. </p>
+			<p class="card-text">The final accepted papers will be distributed to conference attendees and also as a volume of CEUR-WS. By submitting a paper, the authors accept the CEUR-WS publishing rules.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="results">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-4" >
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Competition results</b></h3>
+            <h4 class="card-title"><b style="color:#333333">Round 1 Results on the Test set</b></h4>
+            
+			<table class="table table-hover" id="round1_results">
+              <thead>
+                <tr>
+                	<th scope="col" colspan="4">Task 1 (product matching)</th>
+                	<th scope="col" colspan="4">Task 2 (product classification)</th>                  
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (positive pairs only)</b></td>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (avg. weighted*)</b></td>                
+                </tr>
+                <tr>
+                  <td>PMap</td>
+                  <td>82.04</td>
+                  <td>90.48</td>
+                  <td>86.05</td>
+                  <td>Rhinobird</td>
+                  <td>89.01</td>
+                  <td>89.04</td>
+                  <td>88.62</td>
+                </tr>
+                <tr>                  
+                  <td>Rhinobird</td>
+                  <td>82.86</td>
+                  <td>88.38</td>
+                  <td>85.53</td>
+                  <td>Team ISI</td>
+                  <td>87.16</td>
+                  <td>86.85</td>
+                  <td>86.54</td>
+                </tr>
+                <tr>
+                  <td>ASVinSpace</td>
+                  <td>86.20</td>
+                  <td>82.10</td>
+                  <td>84.10</td>
+                  <td>ASVinSpace</td>
+                  <td>86.96</td>
+                  <td>86.30</td>
+                  <td>86.10</td>
+                </tr>
+                <tr>
+                  <td>ISCAS-ICIP</td>
+                  <td>83.89</td>                 
+                  <td>81.33</td>
+                  <td>82.59</td>
+                  <td>Megagon</td>
+                  <td>84.98</td>
+                  <td>84.98</td>
+                  <td>84.98</td>
+                </tr>
+                <tr>
+                  <td>Megagon</td>
+                  <td>82.69</td>
+                  <td>65.52</td>
+                  <td>73.11</td>
+                  <td><span style="background-color: yellow">Baseline FastText</span></td>
+                  <td>85.55</td>
+                  <td>84.17</td>
+                  <td>84.26</td>
+                </tr>    
+              	<tr>
+                  <td><span style="background-color: yellow">Baseline DeepMatcher</span></td>
+                  <td>70.89</td>
+                  <td>74.67</td>
+                  <td>72.73</td>
+                  <td>DICE_UPB</td>
+                  <td>85.30</td>
+                  <td>81.49</td>
+                  <td>81.84</td>
+                </tr>    
+                <tr>
+                  <td>Team ISI</td>
+                  <td>78.44</td>
+                  <td>57.52</td>
+                  <td>66.37</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>                    
+              </tbody>
+            </table>
+            <p>* Average weighted macro F1 of all three levels. This can result in an F-score that is not between precision and recall.
+
+
+
+
+
+            <h4 class="card-title"><b style="color:#333333">Round 2 Results on the Test set</b></h4>
+            
+			<table class="table table-hover" id="round2_results">
+              <thead>
+                <tr>
+                	<th scope="col" colspan="4">Task 1 (product matching)</th>
+                	<th scope="col" colspan="4">Task 2 (product classification)</th>                  
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (positive pairs only)</b></td>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (avg. weighted*)</b></td>                
+                </tr>
+                <tr>
+                  <td>Rhinobird</td>
+                  <td>80.63</td>
+                  <td>92.00</td>
+                  <td>85.94</td>
+                  <td>Rhinobird</td>
+                  <td>88.97</td>
+                  <td>88.72</td>
+                  <td>88.43</td>
+                </tr>               
+                <tr>
+                  <td>ISCAS-ICIP</td>
+                  <td>85.77</td>
+                  <td>84.95</td>
+                  <td>85.36</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><span style="background-color: yellow">Baseline DeepMatcher</span></td>
+                  <td>70.89</td>
+                  <td>74.67</td>
+                  <td>72.73</td>
+                  <td><span style="background-color: yellow">Baseline FastText</span></td>
+                  <td>85.55</td>
+                  <td>84.17</td>
+                  <td>84.26</td>
+                </tr>                  	
+              </tbody>
+            </table>
+
+
+            <h4 class="card-title"><b style="color:#333333">Overall Results</b></h4>
+			<table class="table table-hover" id="overall_results">
+              <thead>
+                <tr>
+                	<th scope="col" colspan="4">Task 1 (product matching)</th>
+                	<th scope="col" colspan="4">Task 2 (product classification)</th>                  
+                </tr>
+              </thead>
+              <tbody>
+              	<tr>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (positive pairs only)</b></td>
+                  <td><b>Team/System</b></td>
+                  <td><b>Precision</b></td>
+                  <td><b>Recall</b></td>
+                  <td><b>F1 (avg. weighted*)</b></td>                
+                </tr>
+                <tr>
+                  <td>PMap</td>
+                  <td>82.04</td>
+                  <td>90.48</td>
+                  <td>86.05</td>
+                  <td>Rhinobird</td>
+                  <td>89.01</td>
+                  <td>89.04</td>
+                  <td>88.62</td>
+                </tr>
+                <tr>
+                  <td>Rhinobird (R2)</td>
+                  <td>80.63</td>
+                  <td>92.00</td>
+                  <td>85.94</td>
+                  <td>Rhinobird (R2)</td>
+                  <td>88.97</td>
+                  <td>88.72</td>
+                  <td>88.43</td>
+                </tr>
+                <tr>
+                  <td>Rhinobird</td>
+                  <td>82.86</td>
+                  <td>88.38</td>
+                  <td>85.53</td>
+                  <td>Team ISI</td>
+                  <td>87.16</td>
+                  <td>86.85</td>
+                  <td>86.54</td>
+                </tr>
+                <tr>
+                  <td>ISCAS-ICIP (R2)</td>
+                  <td>85.77</td>
+                  <td>84.95</td>
+                  <td>85.36</td>
+                  <td>ASVinSpace</td>
+                  <td>86.96</td>
+                  <td>86.30</td>
+                  <td>86.10</td>
+                </tr>
+                <tr>
+                  <td>ASVinSpace</td>
+                  <td>86.20</td>
+                  <td>82.10</td>
+                  <td>84.10</td>
+                  <td>Megagon</td>
+                  <td>84.98</td>
+                  <td>84.98</td>
+                  <td>84.98</td>
+                </tr>
+                <tr>
+                  <td>ISCAS-ICIP</td>
+                  <td>83.89</td>                 
+                  <td>81.33</td>
+                  <td>82.59</td>
+                  <td><span style="background-color: yellow">Baseline FastText</span></td>
+                  <td>85.55</td>
+                  <td>84.17</td>
+                  <td>84.26</td>
+                </tr>
+                <tr>
+                  <td>Megagon</td>
+                  <td>82.69</td>
+                  <td>65.52</td>
+                  <td>73.11</td>
+                  <td>DICE_UPB</td>
+                  <td>85.30</td>
+                  <td>81.49</td>
+                  <td>81.84</td>
+                </tr>
+                <tr>
+                  <td><span style="background-color: yellow">Baseline DeepMatcher</span></td>
+                  <td>70.89</td>
+                  <td>74.67</td>
+                  <td>72.73</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>    
+                <tr>
+                  <td>Team ISI</td>
+                  <td>78.44</td>
+                  <td>57.52</td>
+                  <td>66.37</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>                    
+              </tbody>
+            </table>
+            <p>* R2 indicates results obtained by the same team in Round 2. Otherwise, results are obtained in Round 1
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="presentation">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-2">
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Conference presentation</b></h3>
+            <p class="card-text">Details of the presentation schedule will be published here in due course. Prizes for the winner of Round One will be handed out during the event.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="committee">
+      <div class="col-lg-12">
+        <div class="card border-0 mt-4 mb-2">
+          <div class="card-body">
+            <h3 class="card-title"><b style="color:#333333">Organizing committee </b></h3>
+            <p class="card-text">To contact the organising committee please use the Google discussion group <a href="https://groups.google.com/forum/#!forum/mwpd2020">here</a></p>
+            <p><b>Chair</b></p>
+			<ul>
+  				<li>Dr Ziqi Zhang (Information School, The University of Sheffield)</li>
+  				<li>Prof. Christian Bizer (Institute of Computer Science and Business Informatics, The Mannheim University)</li>
+  			</ul>
+            <p><b>Other PC members</b></p>
+            <ul>  				
+  				<li>Dr Haiping Lu (Department of Computer Science, The University of Sheffield)</li>
+  				<li>Dr Jun Ma (Amazon Inc. Seattle, US)</li>
+  				<li>Prof. Paul Clough (Information School, The University of Sheffield & Peak Indicators)</li>
+  				<li>Ms Anna Primpeli (Institute of Computer Science and Business Informatics, The Mannheim University)</li>
+  				<li>Mr Ralph Peeters (Institute of Computer Science and Business Informatics, The Mannheim University)</li>
+  				<li>Mr. Abdulkareem Alqusair (Information School, The University of Sheffield)</li>
+			</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+<footer class="swc-footer">
+  &nbsp;
+  <h6 style="color: white;">Acknowledgements </h6>
+  <p></p>
+  <div class="row" style="margin:0;">
+  	<div class="col-sm-3">
+      <a href="https://www.peakindicators.com/"><img src="img/peak2.jpg"  style="width:60%"></a>
+    </div>
+    <div class="col-sm-3">
+      <a href="https://www.amazon.com/"><img src="img/amazon.png" style="width:50%"></a>
+    </div>    
+    <div class="col-sm-3">
+      <a href="https://www.uni-mannheim.de/"><img src="img/university-of-mannheim-logo-vector.png"  style="width:55%"></a>
+    </div>
+    <div class="col-sm-3">
+      <a href="https://www.sheffield.ac.uk/"><img src="img/sheffield3.png"  style="width:70%"></a>
+    </div>    
+    &nbsp;&nbsp;
+  </div>
+</footer>
+</html>
